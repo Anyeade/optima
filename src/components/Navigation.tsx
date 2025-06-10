@@ -10,7 +10,8 @@ import {
   User, 
   Menu,
   X,
-  Zap
+  Zap,
+  ChevronDown
 } from 'lucide-react'
 import { useState } from 'react'
 
@@ -61,13 +62,48 @@ export function Navigation() {
                 </div>
               </>
             ) : (
-              <div className="flex items-center space-x-4">
-                <Link href="/pricing" className="text-gray-700 hover:text-blue-600">
-                  Pricing
-                </Link>
-                <Link href="/docs" className="text-gray-700 hover:text-blue-600">
-                  Docs
-                </Link>
+              <div className="flex items-center space-x-6">
+                <div className="relative group">
+                  <button className="text-gray-700 hover:text-blue-600 flex items-center">
+                    Product
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border">
+                    <div className="py-2">
+                      <Link href="/docs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">API Docs</Link>
+                      <Link href="/playground" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Playground</Link>
+                      <Link href="/pricing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pricing</Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative group">
+                  <button className="text-gray-700 hover:text-blue-600 flex items-center">
+                    Company
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border">
+                    <div className="py-2">
+                      <Link href="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">About</Link>
+                      <Link href="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Blog</Link>
+                      <Link href="/careers" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Careers</Link>
+                      <Link href="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact</Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative group">
+                  <button className="text-gray-700 hover:text-blue-600 flex items-center">
+                    Support
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border">
+                    <div className="py-2">
+                      <Link href="/support" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</Link>
+                      <Link href="/docs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Documentation</Link>
+                      <Link href="/status" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Status</Link>
+                      <Link href="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Support</Link>
+                    </div>
+                  </div>
+                </div>
                 <Link href="/auth">
                   <Button variant="outline">Sign In</Button>
                 </Link>
@@ -120,18 +156,47 @@ export function Navigation() {
               </>
             ) : (
               <>
-                <Link href="/pricing" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
+                <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Product</div>
+                <Link href="/docs" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  API Docs
+                </Link>
+                <Link href="/playground" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  Playground
+                </Link>
+                <Link href="/pricing" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
                   Pricing
                 </Link>
-                <Link href="/docs" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
-                  Docs
+                
+                <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider mt-4">Company</div>
+                <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  About
                 </Link>
-                <Link href="/auth" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
-                  Sign In
+                <Link href="/blog" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  Blog
                 </Link>
-                <Link href="/auth?mode=signup" className="block px-3 py-2 text-blue-600 font-medium">
-                  Get Started
+                <Link href="/careers" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  Careers
                 </Link>
+                <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  Contact
+                </Link>
+                
+                <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider mt-4">Support</div>
+                <Link href="/support" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  Help Center
+                </Link>
+                <Link href="/status" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  Status
+                </Link>
+                
+                <div className="border-t border-gray-200 mt-4 pt-4">
+                  <Link href="/auth" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
+                    Sign In
+                  </Link>
+                  <Link href="/auth?mode=signup" className="block px-3 py-2 text-blue-600 font-medium">
+                    Get Started
+                  </Link>
+                </div>
               </>
             )}
           </div>
