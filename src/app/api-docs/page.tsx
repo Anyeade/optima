@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import { Navigation } from '@/components/Navigation'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -9,10 +12,13 @@ import {
   Webhook,
   FileText,
   Play,
-  Copy
+  Copy,
+  CheckCircle
 } from 'lucide-react'
 
 export default function ApiDocsPage() {
+  const [copiedText, setCopiedText] = useState<string>('')
+
   const endpoints = [
     {
       method: 'POST',
@@ -126,6 +132,8 @@ export default function ApiDocsPage() {
 
   const copyCode = (code: string) => {
     navigator.clipboard.writeText(code)
+    setCopiedText(code)
+    setTimeout(() => setCopiedText(''), 2000)
   }
 
   return (
@@ -185,7 +193,11 @@ export default function ApiDocsPage() {
                       size="sm" 
                       onClick={() => copyCode('curl -H "Authorization: Bearer YOUR_API_KEY"')}
                     >
-                      <Copy className="h-4 w-4" />
+                      {copiedText === 'curl -H "Authorization: Bearer YOUR_API_KEY"' ? (
+                        <CheckCircle className="h-4 w-4 text-green-500" />
+                      ) : (
+                        <Copy className="h-4 w-4" />
+                      )}
                     </Button>
                   </div>
                   <div>curl -H "Authorization: Bearer YOUR_API_KEY" \</div>
