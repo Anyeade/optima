@@ -1,6 +1,10 @@
+'use client'
+
 import { Navigation } from '@/components/Navigation'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import Link from 'next/link'
+import { useState } from 'react'
 import { 
   Calendar, 
   User, 
@@ -12,6 +16,8 @@ import {
 } from 'lucide-react'
 
 export default function BlogPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All Posts")
+  
   const featuredPost = {
     title: "The Future of Business Process Optimization: AI-Driven Insights",
     excerpt: "Discover how artificial intelligence is revolutionizing the way companies optimize their workflows, reduce costs, and improve efficiency.",
@@ -138,10 +144,12 @@ export default function BlogPage() {
                   </div>
                   <span>{featuredPost.readTime}</span>
                 </div>
-                <Button className="bg-blue-600 hover:bg-blue-700">
-                  Read More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href="/blog/ai-powered-process-optimization">
+                  <Button className="bg-blue-600 hover:bg-blue-700">
+                    Read More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -156,9 +164,10 @@ export default function BlogPage() {
                 {categories.map((category) => (
                   <Button
                     key={category}
-                    variant={category === "All Posts" ? "default" : "outline"}
+                    variant={category === selectedCategory ? "default" : "outline"}
                     size="sm"
-                    className={category === "All Posts" ? "bg-blue-600 hover:bg-blue-700" : ""}
+                    className={category === selectedCategory ? "bg-blue-600 hover:bg-blue-700" : ""}
+                    onClick={() => setSelectedCategory(category)}
                   >
                     {category}
                   </Button>

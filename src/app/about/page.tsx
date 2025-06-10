@@ -1,6 +1,7 @@
 import { Navigation } from '@/components/Navigation'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import Link from 'next/link'
 import { 
   Target, 
   Users, 
@@ -86,14 +87,18 @@ export default function AboutPage() {
             We're on a mission to transform how businesses operate by making AI-powered process optimization accessible to everyone.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-              <Users className="mr-2 h-5 w-5" />
-              Join Our Team
-            </Button>
-            <Button variant="outline" size="lg">
-              <Globe className="mr-2 h-5 w-5" />
-              Our Impact
-            </Button>
+            <Link href="/careers">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Users className="mr-2 h-5 w-5" />
+                Join Our Team
+              </Button>
+            </Link>
+            <Link href="/blog">
+              <Button variant="outline" size="lg">
+                <Globe className="mr-2 h-5 w-5" />
+                Our Impact
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -225,12 +230,16 @@ export default function AboutPage() {
                 Whether you're looking to optimize your processes or join our team, we'd love to hear from you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  Get Started Free
-                </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">
-                  View Open Positions
-                </Button>
+                <Link href="/auth?mode=signup">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                    Get Started Free
+                  </Button>
+                </Link>
+                <Link href="/careers">
+                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">
+                    View Open Positions
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>

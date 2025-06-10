@@ -1,6 +1,7 @@
 import { Navigation } from '@/components/Navigation'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import Link from 'next/link'
 import { 
   MapPin, 
   Clock, 
@@ -85,14 +86,18 @@ export default function CareersPage() {
             Help us transform how businesses operate by building the future of AI-powered process optimization
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-              <Users className="mr-2 h-5 w-5" />
-              View Open Positions
-            </Button>
-            <Button variant="outline" size="lg">
-              <Globe className="mr-2 h-5 w-5" />
-              Life at Optima
-            </Button>
+            <Link href="#open-positions">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Users className="mr-2 h-5 w-5" />
+                View Open Positions
+              </Button>
+            </Link>
+            <Link href="/about">
+              <Button variant="outline" size="lg">
+                <Globe className="mr-2 h-5 w-5" />
+                Life at Optima
+              </Button>
+            </Link>
           </div>
         </div>
 

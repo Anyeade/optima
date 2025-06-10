@@ -1,0 +1,24 @@
+
+> optima@0.1.0 dev
+> next dev --turbopack --port 12000 --hostname 0.0.0.0
+
+   ▲ Next.js 15.3.3 (Turbopack)
+   - Local:        http://localhost:12000
+   - Network:      http://0.0.0.0:12000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1083ms
+ ○ Compiling /docs ...
+ ✓ Compiled /docs in 3s
+ GET /docs 200 in 3350ms
+ ○ Compiling /terms ...
+ ✓ Compiled /terms in 914ms
+ GET /terms 200 in 1040ms
+ ⚠ Cross origin request detected from work-1-ngtnumebfwjouafq.prod-runtime.all-hands.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ○ Compiling / ...
+ ✓ Compiled / in 1441ms
+ GET / 200 in 1718ms
+ GET /terms 200 in 99ms
+ GET /terms 200 in 97ms
