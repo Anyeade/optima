@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/Button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card"
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/Badge"
 import { Input } from "@/components/ui/Input"
 import { BookOpen, Search, MessageCircle, FileText, Video, Code, Zap, Shield } from "lucide-react"
 import Link from "next/link"
