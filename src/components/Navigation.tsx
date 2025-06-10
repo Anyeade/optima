@@ -70,6 +70,7 @@ export function Navigation() {
                   </button>
                   <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border">
                     <div className="py-2">
+                      <Link href="/features" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Features</Link>
                       <Link href="/docs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">API Docs</Link>
                       <Link href="/playground" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Playground</Link>
                       <Link href="/pricing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pricing</Link>
@@ -97,10 +98,10 @@ export function Navigation() {
                   </button>
                   <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border">
                     <div className="py-2">
-                      <Link href="/support" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</Link>
+                      <Link href="/help" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help Center</Link>
+                      <Link href="/support" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Support</Link>
                       <Link href="/docs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Documentation</Link>
                       <Link href="/status" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Status</Link>
-                      <Link href="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Support</Link>
                     </div>
                   </div>
                 </div>
@@ -157,6 +158,9 @@ export function Navigation() {
             ) : (
               <>
                 <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Product</div>
+                <Link href="/features" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  Features
+                </Link>
                 <Link href="/docs" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
                   API Docs
                 </Link>
@@ -182,8 +186,11 @@ export function Navigation() {
                 </Link>
                 
                 <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider mt-4">Support</div>
-                <Link href="/support" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                <Link href="/help" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
                   Help Center
+                </Link>
+                <Link href="/support" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                  Support
                 </Link>
                 <Link href="/status" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
                   Status
