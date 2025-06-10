@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { 
@@ -376,6 +377,8 @@ export default function ApiDocsPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }

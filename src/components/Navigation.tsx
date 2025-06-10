@@ -50,6 +50,9 @@ export function Navigation() {
                 <Link href="/playground" className="text-gray-700 hover:text-blue-600">
                   Playground
                 </Link>
+                <Link href="/admin" className="text-gray-700 hover:text-blue-600">
+                  Admin
+                </Link>
                 <div className="flex items-center space-x-4">
                   <Link href="/settings">
                     <Button variant="ghost" size="sm">
