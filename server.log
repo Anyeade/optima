@@ -22,3 +22,39 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 1718ms
  GET /terms 200 in 99ms
  GET /terms 200 in 97ms
+ GET / 200 in 156ms
+ GET / 200 in 136ms
+ GET / 200 in 170ms
+ GET / 200 in 82ms
+ ○ Compiling /pricing ...
+ ✓ Compiled /pricing in 1128ms
+ GET /pricing 200 in 1215ms
+ ○ Compiling /auth ...
+ ✓ Compiled /auth in 1135ms
+ GET /auth?mode=signup 200 in 1178ms
+ GET / 200 in 145ms
+ GET / 200 in 126ms
+ ✓ Compiled in 170ms
+ GET /terms 200 in 38ms
+ GET /auth?mode=signup 200 in 39ms
+ GET / 200 in 118ms
+ GET /terms 200 in 29ms
+ ✓ Compiled in 134ms
+ GET /auth?mode=signup 200 in 37ms
+ ✓ Compiled in 162ms
+ ○ Compiling /careers ...
+ ✓ Compiled /careers in 1324ms
+ GET /careers 200 in 1539ms
+ ✓ Compiled in 193ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 1235ms
+ GET /about 200 in 1495ms
+ ○ Compiling /status ...
+ ✓ Compiled /status in 1349ms
+ GET /status 200 in 1584ms
+ ✓ Compiled /pricing in 21ms
+ GET /pricing 200 in 526ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 1454ms
+ GET /contact 200 in 1613ms
+ GET /auth 200 in 298ms

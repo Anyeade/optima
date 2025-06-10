@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
@@ -282,6 +283,8 @@ export default function SupportPage() {
           </div>
         </div>
       </div>
+      <Footer />
+
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { useAuth } from '@/hooks/useAuth'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { 
@@ -18,6 +19,7 @@ import {
   RefreshCw
 } from 'lucide-react'
 import { generateApiKey, formatApiCalls, getSubscriptionLimits } from '@/lib/utils'
+import { Footer } from '@/components/Footer'
 
 export default function DashboardPage() {
   const { user, loading } = useAuth()
@@ -281,6 +283,9 @@ export default function DashboardPage() {
           </div>
         </div>
       </div>
+      <Footer />
+      <Footer />
+
     </div>
   )
 }

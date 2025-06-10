@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
@@ -245,6 +246,8 @@ export default function AboutPage() {
           </Card>
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }

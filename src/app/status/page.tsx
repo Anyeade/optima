@@ -1,4 +1,5 @@
 import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { 
   CheckCircle, 
@@ -320,6 +321,8 @@ export default function StatusPage() {
           </div>
         </div>
       </div>
+      <Footer />
+
     </div>
   )
 }
