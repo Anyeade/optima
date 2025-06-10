@@ -74,89 +74,50 @@ export default function PlaygroundPage() {
   const handleRun = async () => {
     setLoading(true)
     
-    // Simulate API call
-    setTimeout(() => {
-      const mockResponse = {
-        analyze: `{
-  "process_id": "proc_abc123",
-  "optimization_score": 73,
-  "current_metrics": {
-    "avg_completion_time": 2700,
-    "success_rate": 0.91,
-    "total_cost": 6.50
-  },
-  "bottlenecks": [
-    {
-      "step": "Email Verification",
-      "issue": "High abandonment rate",
-      "impact": "medium",
-      "suggested_fix": "Implement automated email reminders"
-    }
-  ],
-  "recommendations": [
-    {
-      "type": "automation",
-      "description": "Add automated email reminders after 30 minutes",
-      "estimated_improvement": "15% success rate increase",
-      "implementation_effort": "low"
-    },
-    {
-      "type": "workflow_optimization",
-      "description": "Combine profile setup with account creation",
-      "estimated_improvement": "25% time reduction",
-      "implementation_effort": "medium"
-    }
-  ],
-  "predicted_improvements": {
-    "new_completion_time": 2025,
-    "new_success_rate": 0.96,
-    "cost_savings": 1.20
-  }
-}`,
-        insights: `{
-  "process_id": "proc_abc123",
-  "current_score": 78,
-  "trend": "improving",
-  "metrics": {
-    "avg_completion_time": 2100,
-    "success_rate": 0.91,
-    "cost_per_completion": 12.50,
-    "volume_last_24h": 156
-  },
-  "predictions": {
-    "next_week_volume": 1250,
-    "optimization_potential": "23%",
-    "risk_factors": ["peak_traffic_monday"]
-  },
-  "alerts": [
-    {
-      "type": "performance",
-      "message": "Success rate dropped 3% in last hour",
-      "severity": "medium"
-    }
-  ]
-}`,
-        automate: `{
-  "automation_id": "auto_xyz789",
-  "status": "initiated",
-  "process_id": "proc_abc123",
-  "automation_type": "workflow_optimization",
-  "estimated_completion": "2024-06-10T15:30:00Z",
-  "expected_improvements": [
-    "Reduce Email Verification step duration by 25%",
-    "Increase overall success rate to 94%",
-    "Decrease cost per completion by $1.20"
-  ],
-  "progress": {
-    "current_step": "analyzing_current_state",
-    "completion_percentage": 15
-  }
-}`
+    try {
+      let url = ''
+      let method = 'GET'
+      let body = null
+      
+      switch (selectedEndpoint) {
+        case 'analyze':
+          url = '/api/v1/processes/analyze'
+          method = 'POST'
+          body = requestBody
+          break
+        case 'insights':
+          url = '/api/v1/processes/demo123/insights'
+          method = 'GET'
+          break
+        case 'automate':
+          url = '/api/v1/automation/trigger'
+          method = 'POST'
+          body = JSON.stringify({
+            process_id: 'proc_demo123',
+            automation_type: 'workflow_optimization'
+          })
+          break
       }
       
-      setResponse(mockResponse[selectedEndpoint as keyof typeof mockResponse])
+      const response = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer optima_demo_key_12345'
+        },
+        ...(body && { body })
+      })
+      
+      const data = await response.json()
+      setResponse(JSON.stringify(data, null, 2))
+    } catch (error) {
+      setResponse(JSON.stringify({
+        error: 'Failed to call API',
+        message: error instanceof Error ? error.message : 'Unknown error'
+      }, null, 2))
+    } finally {
       setLoading(false)
-    }, 1500)
+    }
   }
 
   const copyResponse = () => {
