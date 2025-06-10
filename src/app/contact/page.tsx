@@ -1,7 +1,10 @@
+'use client'
+
 import { Navigation } from '@/components/Navigation'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+import { useState } from 'react'
 import { 
   Mail, 
   Phone, 
@@ -14,6 +17,28 @@ import {
 } from 'lucide-react'
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: ''
+  })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission here
+    console.log('Form submitted:', formData)
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      subject: '',
+      message: ''
+    })
+  }
+
   const contactMethods = [
     {
       icon: Mail,
@@ -89,18 +114,29 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       First Name *
                     </label>
-                    <Input placeholder="John" />
+                    <Input 
+                      placeholder="John" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Last Name *
                     </label>
-                    <Input placeholder="Doe" />
+                    <Input 
+                      placeholder="Doe" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      required
+                    />
                   </div>
                 </div>
                 
@@ -143,10 +179,11 @@ export default function ContactPage() {
                   />
                 </div>
                 
-                <Button className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
-                  <Send className="mr-2 h-5 w-5" />
-                  Send Message
-                </Button>
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                    <Send className="mr-2 h-5 w-5" />
+                    Send Message
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>
