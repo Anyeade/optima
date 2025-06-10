@@ -10,7 +10,9 @@ The Supabase database setup must be done manually through the Supabase dashboard
 Go to: https://supabase.com/dashboard/project/bazttzhnawopotzsfcqo/sql
 
 ### 2. **Copy the SQL Script**
-Copy the entire contents of the `supabase-setup.sql` file in this repository.
+Copy the entire contents of the `supabase-setup-fixed.sql` file in this repository.
+
+**⚠️ Important:** Use `supabase-setup-fixed.sql` instead of `supabase-setup.sql` to avoid foreign key constraint errors.
 
 ### 3. **Execute the Script**
 1. Paste the SQL script into the SQL Editor
@@ -79,6 +81,11 @@ After running the SQL script, test the setup by:
 **"Function does not exist" errors:**
 - ❌ Some functions may need to be created in order
 - Try running the script in smaller chunks if needed
+
+**"Foreign key constraint violation" errors:**
+- ❌ This happens when using the old `supabase-setup.sql` file
+- ✅ Use `supabase-setup-fixed.sql` instead
+- ✅ The fixed version doesn't include problematic sample data
 
 ### **Manual Table Creation**
 

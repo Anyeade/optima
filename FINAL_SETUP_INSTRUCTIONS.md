@@ -15,7 +15,7 @@ Your **Optima API** platform is fully built and ready for production! Just follo
    - Navigate to: **SQL Editor** → **New Query**
 
 2. **Copy & Execute SQL**
-   - Open the file: `EXECUTE_IN_SUPABASE.sql`
+   - Open the file: `EXECUTE_IN_SUPABASE_FIXED.sql`
    - Copy the entire contents
    - Paste into Supabase SQL Editor
    - Click **"Run"** to execute
@@ -27,6 +27,12 @@ Your **Optima API** platform is fully built and ready for production! Just follo
      - `processes` 
      - `api_usage_logs`
      - `automation_jobs`
+
+4. **Add Sample Data (Optional)**
+   - After creating a user account, you can add sample data
+   - Open `ADD_SAMPLE_DATA.sql`
+   - Replace `YOUR_USER_ID` with your actual user ID
+   - Execute in Supabase SQL Editor
 
 ### 🔐 **Configure Authentication**
 
