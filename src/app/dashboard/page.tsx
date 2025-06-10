@@ -19,7 +19,6 @@ import {
   RefreshCw
 } from 'lucide-react'
 import { generateApiKey, formatApiCalls, getSubscriptionLimits } from '@/lib/utils'
-import { Footer } from '@/components/Footer'
 
 export default function DashboardPage() {
   const { user, loading } = useAuth()
