@@ -12,19 +12,14 @@ import {
   MoreHorizontal,
   Eye,
   Edit,
-  Trash2,
   Mail,
-  DollarSign,
-  Zap,
-  Ban,
   CheckCircle,
-  AlertCircle,
   UserPlus,
   Shield,
   Crown
 } from 'lucide-react'
 import { adminUserService } from '@/lib/adminUtils'
-import { formatDate, formatNumber, getStatusColor, getRoleColor } from '@/lib/adminUtils'
+import { formatDate, formatNumber, getRoleColor } from '@/lib/adminUtils'
 import { useAdmin } from '@/hooks/useAdmin'
 import { Database } from '@/lib/supabase'
 

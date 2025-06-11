@@ -1,17 +1,28 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+interface Step {
+  name?: string
+  duration?: number
+  success_rate?: number
+  cost?: number
+}
+
+interface ProcessAnalysisRequest {
+  steps?: Step[]
+}
+
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
+    const body: ProcessAnalysisRequest = await request.json()
     
     // Simulate AI processing
     const mockResponse = {
       process_id: `proc_${Math.random().toString(36).substring(2, 15)}`,
       optimization_score: Math.floor(Math.random() * 30) + 70, // 70-100
       current_metrics: {
-        avg_completion_time: body.steps?.reduce((sum: number, step: any) => sum + step.duration, 0) || 2700,
-        success_rate: body.steps?.reduce((sum: number, step: any) => sum + step.success_rate, 0) / (body.steps?.length || 1) || 0.91,
-        total_cost: body.steps?.reduce((sum: number, step: any) => sum + (step.cost || 0), 0) || 6.50
+        avg_completion_time: (body.steps ?? []).reduce<number>((sum: number, step: Step) => sum + (step?.duration || 0), 0) || 2700,
+        success_rate: (body.steps ?? []).reduce<number>((sum: number, step: Step) => sum + (step?.success_rate || 0), 0) / ((body.steps?.length || 1)) || 0.91,
+        total_cost: (body.steps ?? []).reduce<number>((sum: number, step: Step) => sum + (step?.cost || 0), 0) || 6.50
       },
       bottlenecks: [
         {
@@ -36,7 +47,7 @@ export async function POST(request: NextRequest) {
         }
       ],
       predicted_improvements: {
-        new_completion_time: Math.floor((body.steps?.reduce((sum: number, step: any) => sum + step.duration, 0) || 2700) * 0.75),
+        new_completion_time: Math.floor((body.steps?.reduce((sum: number, step: Step) => sum + (step.duration || 0), 0) || 2700) * 0.75),
         new_success_rate: 0.96,
         cost_savings: 1.20
       }

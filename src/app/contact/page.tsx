@@ -12,7 +12,6 @@ import {
   MapPin, 
   MessageSquare,
   Clock,
-  Users,
   Building,
   Send
 } from 'lucide-react'
@@ -100,7 +99,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Have questions about Optima API? We're here to help you optimize your business processes.
+            Have questions about Optima API? We&apos;re here to help you optimize your business processes.
           </p>
         </div>
 
@@ -111,7 +110,7 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="text-2xl">Send us a message</CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you within 24 hours
+                  Fill out the form below and we&apos;ll get back to you within 24 hours
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -288,7 +287,7 @@ export default function ContactPage() {
                   <p className="text-sm text-gray-600 mb-4">Yes! Enterprise customers can request custom integrations with their existing systems. Contact our sales team for details.</p>
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900 mb-2">What's your uptime guarantee?</h3>
+                  <h3 className="font-medium text-gray-900 mb-2">What&apos;s your uptime guarantee?</h3>
                   <p className="text-sm text-gray-600 mb-4">We maintain 99.9% uptime with enterprise-grade infrastructure. Check our status page for real-time monitoring.</p>
                   
                   <h3 className="font-medium text-gray-900 mb-2">Can I cancel anytime?</h3>
