@@ -4,6 +4,7 @@ import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { BackToTop } from "@/components/BackToTop";
+import ParticlesBackground from "@/components/ParticlesBackground";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ParticlesBackground />
         <Navigation />
         <div className="pt-16">
           {children}
