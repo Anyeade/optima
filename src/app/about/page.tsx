@@ -227,7 +227,7 @@ export default function AboutPage() {
             <CardContent className="p-12">
               <h2 className="text-3xl font-bold mb-4">Join Us in Transforming Business</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Whether you&apos;re looking to optimize your processes or join our team, we'd love to hear from you.
+                Whether you&apos;re looking to optimize your processes or join our team, we&apos;d love to hear from you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/auth?mode=signup">
