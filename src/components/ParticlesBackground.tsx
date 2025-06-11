@@ -1,17 +1,10 @@
 import React from 'react';
-import Particles from 'react-tsparticles';
-import { loadSlim } from 'tsparticles-slim';
-import type { Engine } from 'tsparticles-engine';
+import Particles from '@tsparticles/react';
 
 const ParticlesBackground = () => {
-  const particlesInit = async (engine: Engine) => {
-    await loadSlim(engine);
-  };
-
   return (
     <Particles
       id="tsparticles"
-      init={particlesInit}
       options={{
         background: {
           color: {
@@ -61,11 +54,7 @@ const ParticlesBackground = () => {
             straight: false,
           },
           number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 50,
+            value: 50
           },
           opacity: {
             value: 0.5,

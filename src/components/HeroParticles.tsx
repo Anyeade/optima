@@ -1,18 +1,10 @@
 import React from 'react';
-import Particles from 'react-tsparticles';
-import { loadSlim } from 'tsparticles-slim';
-import type { Engine } from 'tsparticles-engine';
+import Particles from '@tsparticles/react';
 
 const HeroParticles = () => {
-  const particlesInit = async (engine: Engine) => {
-    // This is where you load features into the engine
-    await loadSlim(engine);
-  };
-
   return (
     <Particles
       id="hero-particles"
-      init={particlesInit}
       options={{
         background: {
           color: {
