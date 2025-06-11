@@ -102,7 +102,7 @@ export default function FeaturesPage() {
             <br />Business Optimization
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Discover how Optima API's advanced features can transform your business processes, 
+            Discover how Optima API&rsquo;s advanced features can transform your business processes,
             reduce costs, and accelerate growth through intelligent automation.
           </p>
           <div className="flex justify-center space-x-4">

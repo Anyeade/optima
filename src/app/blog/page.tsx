@@ -6,14 +6,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { useState } from 'react'
-import { 
-  Calendar, 
-  User, 
-  ArrowRight, 
+import {
+  Calendar,
+  User,
+  ArrowRight,
   Tag,
   TrendingUp,
-  BookOpen,
-  Lightbulb
+  BookOpen
 } from 'lucide-react'
 
 export default function BlogPage() {

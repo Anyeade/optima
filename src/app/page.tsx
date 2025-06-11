@@ -1,15 +1,14 @@
 import Link from 'next/link'
 import { Navigation } from '@/components/Navigation'
 import { Button } from '@/components/ui/Button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
-import { 
-  Zap, 
-  BarChart3, 
-  Brain, 
-  Shield, 
-  Rocket, 
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
+import {
+  Zap,
+  BarChart3,
+  Brain,
+  Shield,
+  Rocket,
   Users,
-  CheckCircle,
   ArrowRight,
   TrendingUp,
   Clock,

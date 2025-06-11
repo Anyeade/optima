@@ -24,8 +24,8 @@ export default function DashboardPage() {
   const { user, loading } = useAuth()
   const router = useRouter()
   const [apiKey, setApiKey] = useState('optima_demo_key_12345')
-  const [apiCalls, setApiCalls] = useState(1247)
-  const [processes, setProcesses] = useState([
+  const [apiCalls] = useState(1247)
+  const [processes] = useState([
     { id: 1, name: 'Customer Onboarding', status: 'active', score: 87 },
     { id: 2, name: 'Sales Pipeline', status: 'optimizing', score: 92 },
     { id: 3, name: 'Support Tickets', status: 'active', score: 78 }
