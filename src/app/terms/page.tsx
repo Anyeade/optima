@@ -61,25 +61,7 @@ export default function TermsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header */}
-      <div className="border-b bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Optima API
-            </Link>
-            <div className="flex items-center space-x-6">
-              <Link href="/features" className="text-gray-600 hover:text-blue-600">Features</Link>
-              <Link href="/docs" className="text-gray-600 hover:text-blue-600">Docs</Link>
-              <Link href="/playground" className="text-gray-600 hover:text-blue-600">Playground</Link>
-              <Link href="/pricing" className="text-gray-600 hover:text-blue-600">Pricing</Link>
-              <Link href="/auth">
-                <Button>Get Started</Button>
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </div>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20">
