@@ -19,11 +19,6 @@ const nextConfig: NextConfig = {
     ]
   },
   webpack: (config, { isServer }) => {
-    // Remove default not-found handler
-    config.plugins = config.plugins.filter((plugin: any) => {
-      return !plugin.constructor?.name?.includes('NotFoundPlugin');
-    });
-
     return config;
   }
 };
