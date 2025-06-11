@@ -1,10 +1,12 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import { loadSlim } from 'tsparticles-slim';
+import type { Engine } from 'tsparticles-engine';
 
 const HeroParticles = () => {
-  const particlesInit = async (main: any) => {
-    await loadFull(main);
+  const particlesInit = async (engine: Engine) => {
+    // This is where you load features into the engine
+    await loadSlim(engine);
   };
 
   return (
@@ -40,21 +42,23 @@ const HeroParticles = () => {
             value: '#ffffff',
           },
           links: {
-            enable: false,
+            enable: true,
+            distance: 150,
+            color: '#3b82f6',
+            opacity: 0.4,
+            width: 1,
           },
           move: {
             enable: true,
-            speed: 3,
-            direction: 'bottom',
+            speed: 2,
+            direction: 'none',
+            random: true,
+            straight: false,
             outModes: {
               default: 'out',
             },
           },
           number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
             value: 50,
           },
           opacity: {

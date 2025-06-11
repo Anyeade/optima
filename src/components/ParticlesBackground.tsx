@@ -1,10 +1,11 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import { loadSlim } from 'tsparticles-slim';
+import type { Engine } from 'tsparticles-engine';
 
 const ParticlesBackground = () => {
-  const particlesInit = async (main: any) => {
-    await loadFull(main);
+  const particlesInit = async (engine: Engine) => {
+    await loadSlim(engine);
   };
 
   return (
@@ -20,28 +21,24 @@ const ParticlesBackground = () => {
         fpsLimit: 120,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: 'push',
-            },
             onHover: {
               enable: true,
-              mode: 'repulse',
+              mode: 'bubble',
             },
           },
           modes: {
-            push: {
-              quantity: 4,
-            },
-            repulse: {
+            bubble: {
               distance: 200,
-              duration: 0.4,
+              size: 15,
+              duration: 2,
+              opacity: 0.8,
+              color: '#3b82f6',
             },
           },
         },
         particles: {
           color: {
-            value: '#3b82f6', // Blue color matching brand
+            value: '#ffffff',
           },
           links: {
             color: '#3b82f6',
@@ -68,7 +65,7 @@ const ParticlesBackground = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 50,
           },
           opacity: {
             value: 0.5,
@@ -77,7 +74,7 @@ const ParticlesBackground = () => {
             type: 'circle',
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 3 },
           },
         },
         detectRetina: true,
