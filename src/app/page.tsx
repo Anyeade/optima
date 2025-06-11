@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
+import { HeroParticles } from '@/components/HeroParticles'
 import { Button } from '@/components/ui/Button'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import {
@@ -22,6 +23,12 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="absolute inset-0 z-0">
+          <HeroParticles />
+        </div>
+        <div className="absolute inset-0 z-0">
+          <HeroParticles />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
