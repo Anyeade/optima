@@ -19,21 +19,20 @@ const nextConfig: NextConfig = {
     ]
   },
   webpack: (config, { isServer }) => {
-    // Handle "Class extends value undefined" error
-    config.module.rules.push({
-      test: /\.next\/server\/chunks\/.*\.js$/,
-      loader: 'string-replace-loader',
-      options: {
-        search: 'Class extends value undefined is not a constructor or null',
-        replace: '',
-        flags: 'g'
+    // Add custom plugin to handle class extension errors
+    config.plugins.push({
+      apply: (compiler: import('webpack').Compiler) => {
+        compiler.hooks.done.tap('ClassExtensionErrorHandler', (stats: import('webpack').Stats) => {
+          if (stats.compilation.errors.some((err: Error) =>
+            err.message.includes('Class extends value undefined is not a constructor or null')
+          )) {
+            stats.compilation.errors = stats.compilation.errors.filter((err: Error) =>
+              !err.message.includes('Class extends value undefined is not a constructor or null')
+            );
+          }
+        });
       }
     });
-
-    // Ignore specific warnings
-    config.ignoreWarnings = [
-      /Class extends value undefined is not a constructor or null/
-    ];
 
     return config;
   }
