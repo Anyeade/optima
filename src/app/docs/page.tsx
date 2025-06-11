@@ -96,25 +96,6 @@ console.log('Recommendations:', analysis.recommendations)`
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header */}
-      <div className="border-b bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              Optima API
-            </Link>
-            <div className="flex items-center space-x-6">
-              <Link href="/features" className="text-gray-600 hover:text-blue-600">Features</Link>
-              <Link href="/playground" className="text-gray-600 hover:text-blue-600">Playground</Link>
-              <Link href="/pricing" className="text-gray-600 hover:text-blue-600">Pricing</Link>
-              <Link href="/auth">
-                <Button>Get Started</Button>
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -368,48 +349,6 @@ print(f"Recommendations: {analysis['recommendations']}")`}</code>
           </div>
         </div>
       </section>
-
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Product</h3>
-              <ul className="space-y-2">
-                <li><Link href="/features" className="text-gray-400 hover:text-white">Features</Link></li>
-                <li><Link href="/docs" className="text-gray-400 hover:text-white">API Docs</Link></li>
-                <li><Link href="/playground" className="text-gray-400 hover:text-white">Playground</Link></li>
-                <li><Link href="/pricing" className="text-gray-400 hover:text-white">Pricing</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
-              <ul className="space-y-2">
-                <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
-                <li><Link href="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
-                <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
-                <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Support</h3>
-              <ul className="space-y-2">
-                <li><Link href="/support" className="text-gray-400 hover:text-white">Support</Link></li>
-                <li><Link href="/help" className="text-gray-400 hover:text-white">Help Center</Link></li>
-                <li><Link href="/status" className="text-gray-400 hover:text-white">Status</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li><Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link></li>
-                <li><Link href="/terms" className="text-gray-400 hover:text-white">Terms</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Optima API. All rights reserved.</p>
-          </div>
-        </div>
-   
     </div>
   )
 }
