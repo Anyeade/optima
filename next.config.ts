@@ -19,19 +19,9 @@ const nextConfig: NextConfig = {
     ]
   },
   webpack: (config, { isServer }) => {
-    // Add custom plugin to handle class extension errors
-    config.plugins.push({
-      apply: (compiler: import('webpack').Compiler) => {
-        compiler.hooks.done.tap('ClassExtensionErrorHandler', (stats: import('webpack').Stats) => {
-          if (stats.compilation.errors.some((err: Error) =>
-            err.message.includes('Class extends value undefined is not a constructor or null')
-          )) {
-            stats.compilation.errors = stats.compilation.errors.filter((err: Error) =>
-              !err.message.includes('Class extends value undefined is not a constructor or null')
-            );
-          }
-        });
-      }
+    // Remove default not-found handler
+    config.plugins = config.plugins.filter((plugin: any) => {
+      return !plugin.constructor?.name?.includes('NotFoundPlugin');
     });
 
     return config;
