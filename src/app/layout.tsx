@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
-
+import { BackToTop } from "@/components/BackToTop";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,6 +33,7 @@ export default function RootLayout({
         <div className="pt-16">
           {children}
           <Footer />
+          <BackToTop />
         </div>
       </body>
     </html>
