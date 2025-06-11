@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { Input } from '@/components/ui/Input'
+import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/Badge'
 import { 
-  LifeBuoy, 
+  LifeBuoy,
   Search, 
   Filter,
   MessageSquare,
@@ -38,13 +38,8 @@ export default function AdminSupportPage() {
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
-  const [selectedTicket, setSelectedTicket] = useState<SupportTicket | null>(null)
 
-  useEffect(() => {
-    loadTickets()
-  }, [currentPage, statusFilter])
-
-  const loadTickets = async () => {
+  const loadTickets = useCallback(async () => {
     try {
       setLoading(true)
       const { data, error, totalPages: pages } = await adminSupportService.getTickets(
@@ -61,7 +56,7 @@ export default function AdminSupportPage() {
       let filteredData = data || []
       
       if (searchTerm) {
-        filteredData = filteredData.filter(ticket => 
+        filteredData = filteredData.filter(ticket =>
           ticket.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           ticket.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
           (ticket.user?.email || '').toLowerCase().includes(searchTerm.toLowerCase())
@@ -79,11 +74,15 @@ export default function AdminSupportPage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [currentPage, statusFilter, searchTerm, priorityFilter])
+
+  useEffect(() => {
+    loadTickets()
+  }, [loadTickets])
 
   const handleUpdateTicket = async (ticketId: string, updates: Partial<SupportTicket>) => {
     try {
-      const { data, error } = await adminSupportService.updateTicket(ticketId, updates)
+      const { error } = await adminSupportService.updateTicket(ticketId, updates)
       
       if (error) {
         console.error('Error updating ticket:', error)

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { 
@@ -14,7 +14,7 @@ import {
   RefreshCw
 } from 'lucide-react'
 import { adminAnalyticsService } from '@/lib/adminUtils'
-import { formatNumber, formatDate } from '@/lib/adminUtils'
+import { formatNumber } from '@/lib/adminUtils'
 
 interface AnalyticsData {
   apiUsage: {
@@ -35,11 +35,7 @@ export default function AdminAnalyticsPage() {
   const [loading, setLoading] = useState(true)
   const [timeRange, setTimeRange] = useState(30)
 
-  useEffect(() => {
-    loadAnalytics()
-  }, [timeRange])
-
-  const loadAnalytics = async () => {
+  const loadAnalytics = useCallback(async () => {
     try {
       setLoading(true)
       
@@ -59,7 +55,11 @@ export default function AdminAnalyticsPage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [timeRange])
+
+  useEffect(() => {
+    loadAnalytics()
+  }, [loadAnalytics])
 
   const getTopEndpoints = () => {
     if (!analytics?.apiUsage.endpointUsage) return []

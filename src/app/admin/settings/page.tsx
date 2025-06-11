@@ -5,7 +5,7 @@ import { AdminNavigation } from '@/components/admin/AdminNavigation'
 import { AdminSidebar } from '@/components/admin/AdminSidebar'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Input } from '@/components/ui/Input'
+import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/Badge'
 import { 
   Settings, 
@@ -19,8 +19,6 @@ import {
   Mail,
   Slack,
   Github,
-  AlertTriangle,
-  CheckCircle,
   Eye,
   EyeOff,
   Copy,

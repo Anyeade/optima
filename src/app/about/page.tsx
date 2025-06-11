@@ -3,10 +3,9 @@ import { Footer } from '@/components/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
-import { 
-  Target, 
-  Users, 
-  Award, 
+import {
+  Target,
+  Users,
   Globe,
   Heart,
   Lightbulb,

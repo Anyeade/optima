@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 
 export default function AdminDashboard() {
-  const [stats, setStats] = useState({
+  const [stats] = useState({
     totalUsers: 1247,
     activeUsers: 892,
     totalRevenue: 45670,
@@ -32,7 +32,7 @@ export default function AdminDashboard() {
     supportTickets: 23
   })
 
-  const [recentActivity, setRecentActivity] = useState([
+  const [recentActivity] = useState([
     { id: 1, type: 'user_signup', user: 'john@example.com', time: '2 minutes ago' },
     { id: 2, type: 'api_call', user: 'sarah@company.com', time: '5 minutes ago' },
     { id: 3, type: 'subscription', user: 'mike@startup.io', time: '12 minutes ago' },
