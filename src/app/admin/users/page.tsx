@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
@@ -40,12 +40,7 @@ export default function AdminUsersPage() {
     admins: 0
   })
 
-  useEffect(() => {
-    loadUsers()
-    loadStats()
-  }, [currentPage, searchTerm, roleFilter, subscriptionFilter])
-
-  const loadUsers = async () => {
+  const loadUsers = useCallback(async () => {
     try {
       setLoading(true)
       const { data, error, totalPages: pages } = await adminUserService.getUsers(
@@ -76,7 +71,7 @@ export default function AdminUsersPage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [currentPage, searchTerm, roleFilter, subscriptionFilter])
 
   const loadStats = async () => {
     try {
@@ -91,24 +86,10 @@ export default function AdminUsersPage() {
     }
   }
 
-  const handleUpdateUser = async (userId: string, updates: Partial<Profile>) => {
-    try {
-      const { data, error } = await adminUserService.updateUser(userId, updates)
-      
-      if (error) {
-        console.error('Error updating user:', error)
-        return
-      }
-
-      // Log admin action
-      await logAdminAction('user_updated', userId, updates)
-      
-      // Refresh users list
-      loadUsers()
-    } catch (error) {
-      console.error('Error updating user:', error)
-    }
-  }
+  useEffect(() => {
+    loadUsers()
+    loadStats()
+  }, [loadUsers])
 
   const getRoleIcon = (role: string) => {
     switch (role) {
@@ -298,7 +279,7 @@ export default function AdminUsersPage() {
                           </div>
                           <div className="text-sm text-gray-500">{user.email}</div>
                         </div>
-                      </div>
+                        </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center space-x-2">
