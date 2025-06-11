@@ -199,7 +199,7 @@ export default function Home() {
               </Button>
             </Link>
             <Link href="/pricing">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-blue-600">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-blue-100 text-blue-100 hover:bg-blue-100 hover:text-blue-600">
                 View Pricing
               </Button>
             </Link>

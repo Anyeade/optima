@@ -170,7 +170,7 @@ export function Navigation() {
                 <Link href="/playground" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
                   Playground
                 </Link>
-                <Link href="/pricing" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                <Link href="/pricing" className="block px-3 py-2 text-gray-900 hover:text-blue-600 ml-4">
                   Pricing
                 </Link>
                 
