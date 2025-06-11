@@ -1,5 +1,4 @@
-import { Navigation } from '@/components/Navigation'
-import { Footer } from '@/components/Footer'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { 
   CheckCircle, 
@@ -136,7 +135,6 @@ export default function StatusPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navigation />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
@@ -321,7 +319,6 @@ export default function StatusPage() {
           </div>
         </div>
       </div>
-      <Footer />
 
     </div>
   )

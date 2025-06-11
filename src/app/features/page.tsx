@@ -5,8 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/Badge"
 import { CheckCircle, Zap, Shield, BarChart3, Cpu, Globe, Clock, Users } from "lucide-react"
 import Link from "next/link"
-import { Navigation } from "@/components/Navigation"
-import { Footer } from "@/components/Footer"
+
 
 export default function FeaturesPage() {
   const features = [
@@ -73,7 +72,6 @@ export default function FeaturesPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20">
@@ -223,7 +221,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }
