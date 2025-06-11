@@ -1,11 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
+  request: NextRequest
 ) {
+  const { searchParams } = new URL(request.url)
+  const processId = searchParams.get('id')
   try {
-    const processId = params.id
+    const processId = searchParams.get('id')
+    if (!processId) {
+      return NextResponse.json(
+        { error: 'Process ID is required' },
+        { status: 400 }
+      )
+    }
     
     // Simulate real-time insights
     const mockInsights = {
