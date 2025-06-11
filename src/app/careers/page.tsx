@@ -183,9 +183,9 @@ export default function CareersPage() {
         <div className="text-center">
           <Card>
             <CardContent className="p-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Don't See Your Role?</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Don&apos;t See Your Role?</h2>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                We're always looking for exceptional talent. Send us your resume and tell us how you'd like to contribute.
+                We&apos;re always looking for exceptional talent. Send us your resume and tell us how you'd like to contribute.
               </p>
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Send Us Your Resume
