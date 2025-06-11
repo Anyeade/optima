@@ -39,7 +39,7 @@ export async function GET(
     }
 
     return NextResponse.json(mockInsights)
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch insights' },
       { status: 500 }

@@ -26,7 +26,7 @@ import { Database } from '@/lib/supabase'
 type Profile = Database['public']['Tables']['profiles']['Row']
 
 export default function AdminUsersPage() {
-  const { logAdminAction, isSuperAdmin } = useAdmin()
+  const { isSuperAdmin } = useAdmin()
   const [users, setUsers] = useState<Profile[]>([])
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState('')
