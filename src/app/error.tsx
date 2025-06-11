@@ -1,20 +1,12 @@
 'use client';
-import Link from 'next/link';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
-export default function ErrorPage({ statusCode }: { statusCode?: number }) {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-4xl font-bold">
-        {statusCode ? `${statusCode} Error` : 'An error occurred'}
-      </h1>
-      <p className="mt-4 text-lg">
-        {statusCode === 404
-          ? "The page you're looking for doesn't exist."
-          : 'Something went wrong on our end.'}
-      </p>
-      <Link href="/" className="mt-6 text-blue-600 hover:underline">
-        Return to Home
-      </Link>
-    </div>
-  );
+export default function ErrorPage({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  return <ErrorBoundary error={error} reset={reset} />;
 }
