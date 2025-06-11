@@ -24,7 +24,7 @@ export function Navigation() {
   }
 
   return (
-    <nav className="bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-50 shadow-sm">
+    <nav className="bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -170,7 +170,7 @@ export function Navigation() {
                 <Link href="/playground" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
                   Playground
                 </Link>
-                <Link href="/pricing" className="block px-3 py-2 text-gray-900 hover:text-blue-600 ml-4">
+                <Link href="/pricing" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
                   Pricing
                 </Link>
                 

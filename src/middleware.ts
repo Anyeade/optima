@@ -78,39 +78,6 @@ export async function middleware(req: NextRequest) {
     }
   }
 
-  // Handle non-matched routes
-  const isApiRoute = req.nextUrl.pathname.startsWith('/api');
-  if (isApiRoute) {
-    return NextResponse.json(
-      { error: 'Not found' },
-      { status: 404 }
-    );
-  }
-
-  // Check if route exists
-  const routeExists = [
-    '/',
-    '/about',
-    '/admin',
-    '/dashboard',
-    '/auth',
-    '/blog',
-    '/careers',
-    '/api-docs',
-    '/help',
-    '/playground',
-    '/pricing',
-    '/privacy',
-    '/status'
-  ].includes(req.nextUrl.pathname);
-
-  if (!routeExists) {
-    const redirectUrl = req.nextUrl.clone();
-    redirectUrl.pathname = '/error';
-    redirectUrl.searchParams.set('statusCode', '404');
-    return NextResponse.rewrite(redirectUrl);
-  }
-
   return res
 }
 
@@ -118,6 +85,6 @@ export const config = {
   matcher: [
     '/admin/:path*',
     '/dashboard/:path*',
-    '/((?!api|_next/static|_next/image|favicon.ico|error).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 }

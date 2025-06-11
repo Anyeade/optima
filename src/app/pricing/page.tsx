@@ -1,5 +1,6 @@
 import Link from 'next/link'
-
+import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { CheckCircle, Zap, Star, Crown, Building } from 'lucide-react'
@@ -88,6 +89,7 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Navigation />
       
       {/* Header */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -264,6 +266,7 @@ export default function PricingPage() {
         </div>
       </section>
 
+      <Footer />
     </div>
   )
 }

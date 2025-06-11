@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import HeroParticles from '@/components/HeroParticles'
+import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/Button'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import {
@@ -21,8 +22,7 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <HeroParticles />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Optimize Everything,
@@ -199,7 +199,7 @@ export default function Home() {
               </Button>
             </Link>
             <Link href="/pricing">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-blue-100 text-black hover:bg-blue-100 hover:text-blue-600">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-blue-600">
                 View Pricing
               </Button>
             </Link>

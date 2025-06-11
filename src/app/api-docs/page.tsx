@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { 
@@ -137,6 +139,7 @@ export default function ApiDocsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Navigation />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
@@ -376,6 +379,7 @@ export default function ApiDocsPage() {
         </div>
       </section>
 
+      <Footer />
       </div>
     </div>
   )
