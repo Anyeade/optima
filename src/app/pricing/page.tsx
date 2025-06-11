@@ -89,7 +89,6 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       
       {/* Header */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -266,7 +265,6 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }
