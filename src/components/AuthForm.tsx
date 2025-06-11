@@ -6,7 +6,6 @@ import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Footer } from '@/components/Footer'
 import { Zap, Mail, Lock, User } from 'lucide-react'
 import Link from 'next/link'
 
@@ -163,7 +162,6 @@ export function AuthForm() {
         </Card>
       </div>
 
-      <Footer />
     </div>
   )
 }
