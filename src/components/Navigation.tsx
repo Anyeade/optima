@@ -203,7 +203,7 @@ export function Navigation() {
                   <Link href="/auth" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
                     Sign In
                   </Link>
-                  <Link href="/auth?mode=signup" className="block px-3 py-2 text-blue-600 font-medium">
+                  <Link href="/auth?mode=signup" className="block px-3 py-2 text-white font-medium">
                     Get Started
                   </Link>
                 </div>
