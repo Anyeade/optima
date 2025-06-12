@@ -26,3 +26,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+.font-poppins-cdn {
+  font-family: 'Poppins', sans-serif;
+}
