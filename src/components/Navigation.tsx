@@ -192,7 +192,7 @@ export function Navigation() {
                 <Link href="/help" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
                   Help Center
                 </Link>
-                <Link href="/support" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">
+                <Link href="/support" className="block px-3 py-2 text-muted-foreground hover:text-primary ml-4">
                   Support
                 </Link>
                 <Link href="/status" className="block px-3 py-2 text-gray-700 hover:text-blue-600 ml-4">

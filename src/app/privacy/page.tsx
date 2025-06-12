@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
           <HeroParticles />
 
         <Card>
-          <CardContent className="p-8 prose prose-gray max-w-none">
+          <CardContent className="p-8 prose prose-foreground max-w-none">
             <h2>1. Information We Collect</h2>
             
             <h3>Account Information</h3>
@@ -164,7 +164,7 @@ export default function PrivacyPage() {
             
             <p>If you have questions about this privacy policy or our data practices, please contact us:</p>
             
-            <div className="bg-gray-50 p-6 rounded-lg mt-6">
+            <div className="bg-muted p-6 rounded-lg mt-6">
               <p><strong>Email:</strong> privacy@optima-api.com</p>
               <p><strong>Address:</strong> 123 Market Street, Suite 400, San Francisco, CA 94105</p>
               <p><strong>Phone:</strong> +1 (555) 123-4567</p>
@@ -190,7 +190,7 @@ export default function PrivacyPage() {
               <li>Right to non-discrimination for exercising privacy rights</li>
             </ul>
 
-            <p className="text-sm text-gray-600 mt-8 pt-8 border-t">
+            <p className="text-sm text-muted-foreground mt-8 pt-8 border-t border-muted">
               This privacy policy is effective as of December 10, 2024. By using Optima API, you agree to the collection and use of information in accordance with this policy.
             </p>
           </CardContent>

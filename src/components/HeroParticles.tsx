@@ -47,17 +47,17 @@ export function HeroParticles() {
     },
     particles: {
       color: {
-        value: ['#00ff88', '#00b8ff', '#3b82f6']
+        value: ['#58a6ff', '#1f6feb', '#238636']
       },
       links: {
-        color: '#00ff88',
+        color: '#58a6ff',
         distance: 100,
         enable: true,
         opacity: 0.6,
         width: 1,
         triangles: {
           enable: true,
-          color: '#00b8ff',
+          color: '#1f6feb',
           opacity: 0.3
         }
       },

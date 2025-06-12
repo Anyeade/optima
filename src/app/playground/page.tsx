@@ -137,13 +137,13 @@ export default function PlaygroundPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">API Playground</h1>
-          <p className="text-gray-600">
+          <h1 className="text-3xl font-bold text-foreground mb-2">API Playground</h1>
+          <p className="text-muted-foreground">
             Test Optima API endpoints with real data and see live responses. 
             Perfect for exploring our AI optimization capabilities.
           </p>
@@ -166,15 +166,15 @@ export default function PlaygroundPage() {
                     onClick={() => setSelectedEndpoint(endpoint.id)}
                     className={`w-full text-left p-3 rounded-lg border transition-colors ${
                       selectedEndpoint === endpoint.id
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
+                        ? 'border-primary bg-muted'
+                        : 'border-muted hover:border-primary'
                     }`}
                   >
                     <div className="flex items-center space-x-3">
-                      <endpoint.icon className="h-5 w-5 text-blue-600" />
+                      <endpoint.icon className="h-5 w-5 text-primary" />
                       <div>
                         <div className="font-medium text-sm">{endpoint.name}</div>
-                        <div className="text-xs text-gray-500">{endpoint.method}</div>
+                        <div className="text-xs text-muted-foreground">{endpoint.method}</div>
                       </div>
                     </div>
                   </button>
@@ -188,18 +188,18 @@ export default function PlaygroundPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-foreground mb-1">
                     API Key
                   </label>
-                  <div className="font-mono text-xs bg-gray-100 p-2 rounded border">
+                  <div className="font-mono text-xs bg-muted p-2 rounded border border-muted">
                     optima_demo_key_12345
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-foreground mb-1">
                     Environment
                   </label>
-                  <select className="w-full p-2 border border-gray-300 rounded text-sm">
+                  <select className="w-full p-2 border border-muted rounded text-sm bg-background text-foreground">
                     <option>Production</option>
                     <option>Sandbox</option>
                   </select>
@@ -238,13 +238,13 @@ export default function PlaygroundPage() {
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Request Body
                       </label>
                       <textarea
                         value={requestBody}
                         onChange={(e) => setRequestBody(e.target.value)}
-                        className="w-full h-64 p-3 border border-gray-300 rounded font-mono text-sm"
+                        className="w-full h-64 p-3 border border-muted rounded font-mono text-sm bg-background text-foreground"
                         placeholder="Enter JSON request body..."
                       />
                     </div>
@@ -293,14 +293,14 @@ export default function PlaygroundPage() {
                       </div>
                     </div>
                   ) : response ? (
-                    <div className="bg-gray-900 text-gray-100 p-4 rounded-lg h-64 overflow-auto">
+                    <div className="bg-muted text-foreground p-4 rounded-lg h-64 overflow-auto">
                       <pre className="text-sm">
                         <code>{response}</code>
                       </pre>
                     </div>
                   ) : (
-                    <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg h-64 flex items-center justify-center">
-                      <div className="text-center text-gray-500">
+                    <div className="bg-background border-2 border-dashed border-muted rounded-lg h-64 flex items-center justify-center">
+                      <div className="text-center text-muted-foreground">
                         <Code className="h-12 w-12 mx-auto mb-4 opacity-50" />
                         <p>Response will appear here</p>
                       </div>
@@ -321,23 +321,23 @@ export default function PlaygroundPage() {
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-4">
-                  <button className="text-left p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors">
-                    <h3 className="font-medium text-gray-900 mb-2">E-commerce Checkout</h3>
-                    <p className="text-sm text-gray-600">
+                  <button className="text-left p-4 border border-muted rounded-lg hover:border-primary transition-colors">
+                    <h3 className="font-medium text-foreground mb-2">E-commerce Checkout</h3>
+                    <p className="text-sm text-muted-foreground">
                       Optimize a 5-step checkout process with cart abandonment issues
                     </p>
                   </button>
                   
-                  <button className="text-left p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors">
-                    <h3 className="font-medium text-gray-900 mb-2">Support Ticket Flow</h3>
-                    <p className="text-sm text-gray-600">
+                  <button className="text-left p-4 border border-muted rounded-lg hover:border-primary transition-colors">
+                    <h3 className="font-medium text-foreground mb-2">Support Ticket Flow</h3>
+                    <p className="text-sm text-muted-foreground">
                       Analyze customer support workflow with response time bottlenecks
                     </p>
                   </button>
                   
-                  <button className="text-left p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors">
-                    <h3 className="font-medium text-gray-900 mb-2">Employee Onboarding</h3>
-                    <p className="text-sm text-gray-600">
+                  <button className="text-left p-4 border border-muted rounded-lg hover:border-primary transition-colors">
+                    <h3 className="font-medium text-foreground mb-2">Employee Onboarding</h3>
+                    <p className="text-sm text-muted-foreground">
                       Streamline HR onboarding process with document verification delays
                     </p>
                   </button>

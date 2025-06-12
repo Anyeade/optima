@@ -215,7 +215,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <div className="text-3xl font-bold mb-2">99.9%</div>
-                  <div className="text-blue-100">API Uptime</div>
+                  <div className="text-primary-foreground">API Uptime</div>
                 </div>
               </div>
             </CardContent>

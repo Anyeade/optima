@@ -90,10 +90,10 @@ export default function PricingPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       
       {/* Header */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Simple, Transparent Pricing
@@ -102,9 +102,9 @@ export default function PricingPage() {
             Choose the perfect plan for your business. Start free and scale as you grow. 
             All plans include our core AI optimization features.
           </p>
-          <div className="flex justify-center items-center space-x-4 text-sm text-gray-600">
+          <div className="flex justify-center items-center space-x-4 text-sm text-muted-foreground">
             <div className="flex items-center">
-              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <CheckCircle className="h-4 w-4 text-primary mr-2" />
               14-day free trial
             </div>
             <div className="flex items-center">
@@ -124,25 +124,25 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {plans.map((plan, index) => (
-              <Card 
-                key={index} 
-                className={`relative ${plan.popular ? 'border-2 border-blue-500 shadow-lg scale-105' : 'border border-gray-200'}`}
+              <Card
+                key={index}
+                className={`relative ${plan.popular ? 'border-2 border-primary shadow-lg scale-105' : 'border border-muted'}`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <CardHeader className="text-center">
-                  <plan.icon className={`h-12 w-12 mx-auto mb-4 ${plan.popular ? 'text-blue-500' : 'text-gray-600'}`} />
+                  <plan.icon className={`h-12 w-12 mx-auto mb-4 ${plan.popular ? 'text-primary' : 'text-muted-foreground'}`} />
                   <CardTitle className="text-2xl">{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className="text-4xl font-bold text-foreground">{plan.price}</span>
                     {plan.price !== 'Custom' && (
-                      <span className="text-gray-500">/{plan.period}</span>
+                      <span className="text-muted-foreground">/{plan.period}</span>
                     )}
                   </div>
                   <CardDescription className="mt-2">
@@ -154,15 +154,15 @@ export default function PricingPage() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <Link href={plan.href}>
-                    <Button 
-                      className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : ''}`}
+                    <Button
+                      className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary/90' : ''}`}
                       variant={plan.popular ? 'default' : 'outline'}
                     >
                       {plan.cta}
@@ -177,7 +177,7 @@ export default function PricingPage() {
           <HeroParticles />
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -245,12 +245,12 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Optimize Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-primary-foreground mb-8">
             Start your free trial today and see the difference AI-powered optimization can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -260,7 +260,7 @@ export default function PricingPage() {
               </Button>
             </Link>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-blue-600">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 Contact Sales
               </Button>
             </Link>

@@ -82,11 +82,11 @@ export function AuthForm() {
             <form onSubmit={handleSubmit} className="space-y-4">
               {isSignUp && (
                 <div>
-                  <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="fullName" className="block text-sm font-medium text-foreground mb-1">
                     Full Name
                   </label>
                   <div className="relative">
-                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <Input
                       id="fullName"
                       type="text"
@@ -101,11 +101,11 @@ export function AuthForm() {
               )}
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">
                   Email Address
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="email"
                     type="email"
@@ -119,11 +119,11 @@ export function AuthForm() {
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="password" className="block text-sm font-medium text-foreground mb-1">
                   Password
                 </label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="password"
                     type="password"
@@ -138,7 +138,7 @@ export function AuthForm() {
               </div>
 
               {error && (
-                <div className="text-red-600 text-sm bg-red-50 p-3 rounded-md">
+                <div className="text-red-400 text-sm bg-red-900/10 p-3 rounded-md">
                   {error}
                 </div>
               )}
@@ -149,11 +149,11 @@ export function AuthForm() {
             </form>
 
             <div className="mt-6 text-center">
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-muted-foreground">
                 {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
-                <Link 
-                  href={isSignUp ? '/auth' : '/auth?mode=signup'} 
-                  className="font-medium text-blue-600 hover:text-blue-500"
+                <Link
+                  href={isSignUp ? '/auth' : '/auth?mode=signup'}
+                  className="font-medium text-primary hover:text-primary/80"
                 >
                   {isSignUp ? 'Sign in' : 'Sign up'}
                 </Link>

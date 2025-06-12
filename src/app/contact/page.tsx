@@ -91,15 +91,15 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-bold text-foreground mb-6">
             Get in Touch
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Have questions about Optima API? We&apos;re here to help you optimize your business processes.
           </p>
         </div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       First Name *
                     </label>
                     <Input 
@@ -129,7 +129,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Last Name *
                     </label>
                     <Input 
@@ -142,24 +142,24 @@ export default function ContactPage() {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Email Address *
                   </label>
                   <Input type="email" placeholder="john@company.com" />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Company
                   </label>
                   <Input placeholder="Your Company Name" />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Subject *
                   </label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <select className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-primary focus:border-transparent bg-background">
                     <option>General Inquiry</option>
                     <option>Technical Support</option>
                     <option>Sales Question</option>
@@ -170,17 +170,17 @@ export default function ContactPage() {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Message *
                   </label>
                   <textarea
                     rows={6}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-input rounded-md focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
                 
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
                     <Send className="mr-2 h-5 w-5" />
                     Send Message
                   </Button>
@@ -202,13 +202,13 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 {contactMethods.map((method) => (
-                  <div key={method.title} className="flex items-start space-x-3 p-3 border rounded-lg hover:bg-gray-50">
-                    <method.icon className="h-6 w-6 text-blue-600 mt-1" />
+                  <div key={method.title} className="flex items-start space-x-3 p-3 border rounded-lg hover:bg-accent">
+                    <method.icon className="h-6 w-6 text-primary mt-1" />
                     <div className="flex-grow">
-                      <h3 className="font-medium text-gray-900">{method.title}</h3>
-                      <p className="text-sm text-gray-600 mb-1">{method.description}</p>
-                      <p className="text-sm font-medium text-blue-600">{method.contact}</p>
-                      <div className="flex items-center text-xs text-gray-500 mt-1">
+                      <h3 className="font-medium text-foreground">{method.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-1">{method.description}</p>
+                      <p className="text-sm font-medium text-primary">{method.contact}</p>
+                      <div className="flex items-center text-xs text-muted-foreground mt-1">
                         <Clock className="h-3 w-3 mr-1" />
                         {method.responseTime}
                       </div>
@@ -228,10 +228,10 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 {offices.map((office) => (
-                  <div key={office.city} className="border-b border-gray-200 pb-4 last:border-b-0">
-                    <h3 className="font-medium text-gray-900 mb-2">{office.city}</h3>
-                    <p className="text-sm text-gray-600 whitespace-pre-line mb-2">{office.address}</p>
-                    <p className="text-sm text-blue-600">{office.phone}</p>
+                  <div key={office.city} className="border-b border-border pb-4 last:border-b-0">
+                    <h3 className="font-medium text-foreground mb-2">{office.city}</h3>
+                    <p className="text-sm text-muted-foreground whitespace-pre-line mb-2">{office.address}</p>
+                    <p className="text-sm text-primary">{office.phone}</p>
                   </div>
                 ))}
               </CardContent>
@@ -248,19 +248,19 @@ export default function ContactPage() {
               <CardContent>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Monday - Friday</span>
+                    <span className="text-muted-foreground">Monday - Friday</span>
                     <span className="font-medium">9:00 AM - 6:00 PM PST</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday</span>
+                    <span className="text-muted-foreground">Saturday</span>
                     <span className="font-medium">10:00 AM - 4:00 PM PST</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Sunday</span>
+                    <span className="text-muted-foreground">Sunday</span>
                     <span className="font-medium">Closed</span>
                   </div>
-                  <div className="mt-4 p-3 bg-blue-50 rounded-lg">
-                    <p className="text-xs text-blue-800">
+                  <div className="mt-4 p-3 bg-accent rounded-lg">
+                    <p className="text-xs text-accent-foreground">
                       <strong>Enterprise customers</strong> have access to 24/7 priority support
                     </p>
                   </div>
@@ -282,18 +282,18 @@ export default function ContactPage() {
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="font-medium text-gray-900 mb-2">How quickly can I get started?</h3>
-                  <p className="text-sm text-gray-600 mb-4">You can start optimizing processes within 5 minutes of signing up. Our quick start guide walks you through your first API call.</p>
+                  <h3 className="font-medium text-foreground mb-2">How quickly can I get started?</h3>
+                  <p className="text-sm text-muted-foreground mb-4">You can start optimizing processes within 5 minutes of signing up. Our quick start guide walks you through your first API call.</p>
                   
-                  <h3 className="font-medium text-gray-900 mb-2">Do you offer custom integrations?</h3>
-                  <p className="text-sm text-gray-600 mb-4">Yes! Enterprise customers can request custom integrations with their existing systems. Contact our sales team for details.</p>
+                  <h3 className="font-medium text-foreground mb-2">Do you offer custom integrations?</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Yes! Enterprise customers can request custom integrations with their existing systems. Contact our sales team for details.</p>
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 mb-2">What&apos;s your uptime guarantee?</h3>
-                  <p className="text-sm text-gray-600 mb-4">We maintain 99.9% uptime with enterprise-grade infrastructure. Check our status page for real-time monitoring.</p>
+                  <p className="text-sm text-muted-foreground mb-4">We maintain 99.9% uptime with enterprise-grade infrastructure. Check our status page for real-time monitoring.</p>
                   
-                  <h3 className="font-medium text-gray-900 mb-2">Can I cancel anytime?</h3>
-                  <p className="text-sm text-gray-600 mb-4">Absolutely. You can upgrade, downgrade, or cancel your subscription at any time with no penalties or hidden fees.</p>
+                  <h3 className="font-medium text-foreground mb-2">Can I cancel anytime?</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Absolutely. You can upgrade, downgrade, or cancel your subscription at any time with no penalties or hidden fees.</p>
                 </div>
               </div>
             </CardContent>
