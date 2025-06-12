@@ -24,6 +24,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
         <div className="absolute inset-0 z-0">
+          <HeroParticles />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -126,7 +127,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-          <HeroParticles />
 
       {/* Use Cases Section */}
       <section className="py-20 bg-white">
