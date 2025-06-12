@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { BackToTop } from "@/components/BackToTop";
@@ -29,14 +30,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{
-          '--background': '#0d1117',
-          '--foreground': '#c9d1d9',
-          '--primary': '#58a6ff',
-          '--secondary': '#1f6feb',
-          '--accent': '#238636',
-          '--border': '#30363d',
-        } as React.CSSProperties}
       >
         <div className="fixed inset-0 z-[-1]">
           <ParticlesBackground />
