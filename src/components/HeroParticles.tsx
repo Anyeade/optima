@@ -32,29 +32,34 @@ export function HeroParticles() {
       events: {
         onHover: {
           enable: true,
-          mode: 'bubble'
+          mode: 'connect'
         }
       },
       modes: {
-        bubble: {
+        connect: {
           distance: 200,
-          size: 15,
-          duration: 2,
-          opacity: 0.8,
-          color: '#3b82f6'
+          links: {
+            opacity: 0.5
+          },
+          radius: 150
         }
       }
     },
     particles: {
       color: {
-        value: ['#3b82f6', '#60a5fa', '#93c5fd']
+        value: ['#00ff88', '#00b8ff', '#3b82f6']
       },
       links: {
-        color: '#60a5fa',
-        distance: 150,
+        color: '#00ff88',
+        distance: 100,
         enable: true,
-        opacity: 0.4,
-        width: 1
+        opacity: 0.6,
+        width: 1,
+        triangles: {
+          enable: true,
+          color: '#00b8ff',
+          opacity: 0.3
+        }
       },
       move: {
         direction: 'none',
@@ -62,24 +67,29 @@ export function HeroParticles() {
         outModes: {
           default: 'bounce'
         },
-        random: false,
-        speed: 3,
-        straight: false
+        random: true,
+        speed: 2,
+        straight: false,
       },
       number: {
         density: {
           enable: true
         },
-        value: 100
+        value: 150
       },
       opacity: {
-        value: 0.5
+        value: 0.7
       },
       shape: {
-        type: ['circle', 'triangle', 'star']
+        type: ['circle', 'triangle', 'polygon']
       },
       size: {
-        value: { min: 1, max: 5 }
+        value: { min: 1, max: 3 }
+      },
+      wobble: {
+        enable: true,
+        distance: 10,
+        speed: 0.5
       }
     },
     detectRetina: true
