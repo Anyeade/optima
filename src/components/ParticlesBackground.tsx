@@ -29,9 +29,9 @@ export function ParticlesBackground() {
           id="tsparticles"
           particlesLoaded={particlesLoaded}
           options={{
-        background: {
-          color: '#000000'
-        },
+            background: {
+              color: 'transparent'
+            },
         fpsLimit: 120,
         interactivity: {
           events: {
