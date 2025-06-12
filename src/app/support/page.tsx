@@ -276,7 +276,7 @@ export default function SupportPage() {
                   <p className="text-sm text-gray-600">+1 (555) 123-4567</p>
                   <p className="text-xs text-gray-500">Business hours only</p>
                 </div>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                   <MessageSquare className="mr-2 h-4 w-4" />
                   Start Live Chat
                 </Button>

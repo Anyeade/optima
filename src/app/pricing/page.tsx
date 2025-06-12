@@ -162,7 +162,7 @@ export default function PricingPage() {
                   
                   <Link href={plan.href}>
                     <Button 
-                      className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : ''}`}
+                      className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700 text-white' : ''}`}
                       variant={plan.popular ? 'default' : 'outline'}
                     >
                       {plan.cta}

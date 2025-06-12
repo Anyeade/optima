@@ -146,7 +146,7 @@ export default function BlogPage() {
                   <span>{featuredPost.readTime}</span>
                 </div>
                 <Link href="/blog/ai-powered-process-optimization">
-                  <Button className="bg-blue-600 hover:bg-blue-700">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                     Read More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -246,7 +246,7 @@ export default function BlogPage() {
                   placeholder="Enter your email"
                   className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                   Subscribe
                 </Button>
               </CardContent>

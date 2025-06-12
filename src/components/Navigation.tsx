@@ -112,7 +112,7 @@ export function Navigation() {
                   <Button variant="outline">Sign In</Button>
                 </Link>
                 <Link href="/auth?mode=signup">
-                  <Button>Get Started</Button>
+                  <Button className="text-white">Get Started</Button>
                 </Link>
               </div>
             )}
@@ -203,7 +203,7 @@ export function Navigation() {
                   <Link href="/auth" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
                     Sign In
                   </Link>
-                  <Link href="/auth?mode=signup" className="block px-3 py-2 text-white font-medium">
+                  <Link href="/auth?mode=signup" className="block px-3 py-2 text-white font-medium bg-blue-600">
                     Get Started
                   </Link>
                 </div>

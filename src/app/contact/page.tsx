@@ -180,7 +180,7 @@ export default function ContactPage() {
                   />
                 </div>
                 
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white" size="lg">
                     <Send className="mr-2 h-5 w-5" />
                     Send Message
                   </Button>

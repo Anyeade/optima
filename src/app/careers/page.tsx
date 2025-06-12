@@ -89,7 +89,7 @@ export default function CareersPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#open-positions">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                 <Users className="mr-2 h-5 w-5" />
                 View Open Positions
               </Button>
@@ -149,7 +149,7 @@ export default function CareersPage() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0 md:ml-6">
-                      <Button className="bg-blue-600 hover:bg-blue-700">
+                      <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                         Apply Now
                       </Button>
                     </div>
@@ -189,7 +189,7 @@ export default function CareersPage() {
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                 We&apos;re always looking for exceptional talent. Send us your resume and tell us how you'd like to contribute.
               </p>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                 Send Us Your Resume
               </Button>
             </CardContent>

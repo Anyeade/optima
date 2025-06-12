@@ -89,7 +89,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/careers">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                 <Users className="mr-2 h-5 w-5" />
                 Join Our Team
               </Button>
@@ -232,7 +232,7 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/auth?mode=signup">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                     Get Started Free
                   </Button>
                 </Link>

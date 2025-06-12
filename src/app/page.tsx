@@ -39,7 +39,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/auth?mode=signup">
-  <Button size="lg" className="text-lg px-8 py-3 text-white">
+  <Button size="lg" className="text-lg px-8 py-3 text-white bg-blue-600">
     Start Free Trial
     <ArrowRight className="ml-2 h-5 w-5" />
   </Button>
@@ -197,7 +197,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/auth?mode=signup">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+              <Button size="lg" variant="secondary" className="text-lg px-8 py-3 text-white">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
