@@ -3,7 +3,7 @@ module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
+  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {
       colors: {
@@ -16,6 +16,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
+        body: ['Poppins', 'sans-serif'],
       },
     },
   },
