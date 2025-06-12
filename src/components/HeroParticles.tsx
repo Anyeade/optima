@@ -86,7 +86,7 @@ export function HeroParticles() {
   }
 
   return (
-    <>
+    <div className="fixed inset-0 bg-transparent z-[-1]">
       {init && (
         <Particles
           id="hero-particles"
@@ -94,6 +94,6 @@ export function HeroParticles() {
           options={options}
         />
       )}
-    </>
+    </div>
   )
 }
