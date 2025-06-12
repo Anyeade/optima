@@ -52,7 +52,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-          <HeroParticles />
 
       {/* Features Section */}
       <section className="py-20 bg-white">
@@ -127,6 +126,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+          <HeroParticles />
 
       {/* Use Cases Section */}
       <section className="py-20 bg-white">
