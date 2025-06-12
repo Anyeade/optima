@@ -6,6 +6,7 @@ import { Footer } from './Footer'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+import { HeroParticles } from './HeroParticles'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Zap, Mail, Lock, User } from 'lucide-react'
 import Link from 'next/link'
@@ -161,6 +162,7 @@ export function AuthForm() {
           </CardContent>
         </Card>
       </div>
+          <HeroParticles />
 
     </div>
   )
