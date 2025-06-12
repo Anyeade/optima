@@ -1,20 +1,34 @@
 'use client'
 
-import { useCallback } from 'react'
-import Particles from '@tsparticles/react'
-import { loadFull } from 'tsparticles'
-import type { Engine } from '@tsparticles/engine'
+import { useCallback, useEffect, useState } from 'react'
+import Particles, { initParticlesEngine } from '@tsparticles/react'
+import { loadSlim } from '@tsparticles/slim'
+import type { Container, Engine } from '@tsparticles/engine'
 
 export function ParticlesBackground() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine)
+  const [init, setInit] = useState(false)
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine)
+    }).then(() => {
+      setInit(true)
+    })
+  }, [])
+
+  const particlesLoaded = useCallback(async (container?: Container) => {
+    if (container) {
+      console.log(container)
+    }
   }, [])
 
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
+    <>
+      {init && (
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={{
         background: {
           color: '#000000'
         },
@@ -66,8 +80,7 @@ export function ParticlesBackground() {
           },
           number: {
             density: {
-              enable: true,
-              area: 800
+              enable: true
             },
             value: 80
           },
@@ -83,6 +96,8 @@ export function ParticlesBackground() {
         },
         detectRetina: true
       }}
-    />
+        />
+      )}
+    </>
   )
 }
