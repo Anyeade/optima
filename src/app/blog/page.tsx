@@ -99,15 +99,15 @@ export default function BlogPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Optima Blog
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Insights, strategies, and best practices for business process optimization and AI-driven automation
           </p>
         </div>
@@ -116,21 +116,21 @@ export default function BlogPage() {
         <Card className="mb-12 overflow-hidden">
           <div className="md:flex">
             <div className="md:w-1/2">
-              <div className="h-64 md:h-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+              <div className="h-64 md:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                 <BookOpen className="h-24 w-24 text-white opacity-50" />
               </div>
             </div>
             <div className="md:w-1/2 p-8">
               <div className="flex items-center space-x-2 mb-4">
-                <Tag className="h-4 w-4 text-primary" />
-                <span className="text-primary font-medium text-sm">{featuredPost.category}</span>
+                <Tag className="h-4 w-4 text-blue-600" />
+                <span className="text-blue-600 font-medium text-sm">{featuredPost.category}</span>
                 <span className="text-gray-400">•</span>
                 <span className="text-gray-500 text-sm">Featured</span>
               </div>
-              <h2 className="text-2xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 {featuredPost.title}
               </h2>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-gray-600 mb-6">
                 {featuredPost.excerpt}
               </p>
               <div className="flex items-center justify-between">
@@ -146,7 +146,7 @@ export default function BlogPage() {
                   <span>{featuredPost.readTime}</span>
                 </div>
                 <Link href="/blog/ai-powered-process-optimization">
-                  <Button className="bg-primary hover:bg-primary/90">
+                  <Button className="bg-blue-600 hover:bg-blue-700">
                     Read More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -168,7 +168,7 @@ export default function BlogPage() {
                     key={category}
                     variant={category === selectedCategory ? "default" : "outline"}
                     size="sm"
-                    className={category === selectedCategory ? "bg-primary hover:bg-primary/90" : ""}
+                    className={category === selectedCategory ? "bg-blue-600 hover:bg-blue-700" : ""}
                     onClick={() => setSelectedCategory(category)}
                   >
                     {category}
@@ -181,13 +181,13 @@ export default function BlogPage() {
             <div className="grid md:grid-cols-2 gap-8">
               {blogPosts.map((post, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <div className="h-48 bg-gradient-to-br from-accent to-secondary flex items-center justify-center">
+                  <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                     <BookOpen className="h-12 w-12 text-gray-400" />
                   </div>
                   <CardHeader>
                     <div className="flex items-center space-x-2 mb-2">
-                      <Tag className="h-4 w-4 text-primary" />
-                      <span className="text-primary font-medium text-sm">{post.category}</span>
+                      <Tag className="h-4 w-4 text-blue-600" />
+                      <span className="text-blue-600 font-medium text-sm">{post.category}</span>
                     </div>
                     <CardTitle className="text-lg leading-tight">
                       {post.title}
@@ -197,7 +197,7 @@ export default function BlogPage() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center space-x-3">
                         <div className="flex items-center">
                           <User className="h-4 w-4 mr-1" />
@@ -244,9 +244,9 @@ export default function BlogPage() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 border border-input rounded focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
+                  className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
-                <Button className="w-full bg-primary hover:bg-primary/90">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">
                   Subscribe
                 </Button>
               </CardContent>
@@ -259,11 +259,11 @@ export default function BlogPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 {blogPosts.slice(0, 3).map((post, index) => (
-                  <div key={index} className="border-b border-border pb-4 last:border-b-0">
+                  <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
                     <h4 className="font-medium text-sm mb-1 line-clamp-2">
                       {post.title}
                     </h4>
-                    <div className="flex items-center text-xs text-muted-foreground space-x-2">
+                    <div className="flex items-center text-xs text-gray-500 space-x-2">
                       <span>{post.author}</span>
                       <span>•</span>
                       <span>{post.readTime}</span>
@@ -283,7 +283,7 @@ export default function BlogPage() {
                   {categories.slice(1).map((category) => (
                     <span
                       key={category}
-                      className="px-3 py-1 bg-accent text-accent-foreground text-sm rounded-full hover:bg-accent/80 cursor-pointer"
+                      className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-gray-200 cursor-pointer"
                     >
                       {category}
                     </span>

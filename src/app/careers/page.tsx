@@ -76,20 +76,20 @@ export default function CareersPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Join Our Mission
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Help us transform how businesses operate by building the future of AI-powered process optimization
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#open-positions">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 <Users className="mr-2 h-5 w-5" />
                 View Open Positions
               </Button>
@@ -106,16 +106,16 @@ export default function CareersPage() {
 
         {/* Benefits */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Why Work With Us</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Work With Us</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit) => (
               <Card key={benefit.title} className="text-center">
                 <CardHeader>
-                  <benefit.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <benefit.icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                   <CardTitle className="text-xl">{benefit.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{benefit.description}</p>
+                  <p className="text-gray-600">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -124,15 +124,15 @@ export default function CareersPage() {
 
         {/* Open Positions */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Open Positions</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Open Positions</h2>
           <div className="space-y-6">
             {openPositions.map((position, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div className="flex-grow">
-                      <h3 className="text-xl font-bold text-foreground mb-2">{position.title}</h3>
-                      <p className="text-muted-foreground mb-4">{position.description}</p>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{position.title}</h3>
+                      <p className="text-gray-600 mb-4">{position.description}</p>
                       <div className="flex flex-wrap gap-4 text-sm text-gray-500">
                         <div className="flex items-center">
                           <MapPin className="h-4 w-4 mr-1" />
@@ -149,7 +149,7 @@ export default function CareersPage() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0 md:ml-6">
-                      <Button className="bg-primary hover:bg-primary/90">
+                      <Button className="bg-blue-600 hover:bg-blue-700">
                         Apply Now
                       </Button>
                     </div>
@@ -161,21 +161,21 @@ export default function CareersPage() {
         </div>
 
         {/* Culture */}
-        <Card className="mb-16 bg-primary text-white">
+        <Card className="mb-16 bg-blue-600 text-white">
           <CardContent className="p-12 text-center">
             <h2 className="text-3xl font-bold mb-6">Our Culture</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-xl font-semibold mb-3">Innovation First</h3>
-                <p className="text-primary-foreground/80">We encourage experimentation and bold ideas that push the boundaries of what's possible.</p>
+                <p className="text-blue-100">We encourage experimentation and bold ideas that push the boundaries of what's possible.</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-3">Customer Obsessed</h3>
-                <p className="text-primary-foreground/80">Every decision we make is guided by creating value for our customers and their success.</p>
+                <p className="text-blue-100">Every decision we make is guided by creating value for our customers and their success.</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-3">Team First</h3>
-                <p className="text-primary-foreground/80">We win together, support each other, and celebrate both individual and team achievements.</p>
+                <p className="text-blue-100">We win together, support each other, and celebrate both individual and team achievements.</p>
               </div>
             </div>
           </CardContent>
@@ -185,11 +185,11 @@ export default function CareersPage() {
         <div className="text-center">
           <Card>
             <CardContent className="p-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Don&apos;t See Your Role?</h2>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Don&apos;t See Your Role?</h2>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                 We&apos;re always looking for exceptional talent. Send us your resume and tell us how you'd like to contribute.
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Send Us Your Resume
               </Button>
             </CardContent>

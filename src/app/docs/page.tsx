@@ -97,7 +97,7 @@ console.log('Recommendations:', analysis.recommendations)`
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
      
 
@@ -109,10 +109,10 @@ console.log('Recommendations:', analysis.recommendations)`
               <BookOpen className="h-4 w-4 mr-2" />
               API Documentation
             </Badge>
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Developer Documentation
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Everything you need to integrate Optima API into your applications. 
               Get started in minutes with our comprehensive guides and examples.
             </p>
@@ -129,7 +129,7 @@ console.log('Recommendations:', analysis.recommendations)`
       </section>
 
       {/* Quick Start */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Quick Start Guide</h2>
           
@@ -178,7 +178,7 @@ console.log('Recommendations:', analysis.recommendations)`
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <pre className="bg-accent text-accent-foreground p-4 rounded-lg overflow-x-auto">
+                  <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
                     <code>{curlExample}</code>
                   </pre>
                 </CardContent>
@@ -191,7 +191,7 @@ console.log('Recommendations:', analysis.recommendations)`
                   <CardTitle>Python Example</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <pre className="bg-accent text-accent-foreground p-4 rounded-lg overflow-x-auto">
+                  <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
                     <code>{`# Install the Optima API client
 pip install optima-api
 
@@ -221,14 +221,14 @@ print(f"Recommendations: {analysis['recommendations']}")`}</code>
       </section>
 
       {/* API Reference */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">API Reference</h2>
           
           <div className="max-w-6xl mx-auto">
             <div className="grid gap-6">
               {endpoints.map((endpoint, index) => (
-                <Card key={index}>
+                <Card key={index} className="border-0 shadow-lg">
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
@@ -265,14 +265,14 @@ print(f"Recommendations: {analysis['recommendations']}")`}</code>
       </section>
 
       {/* SDKs and Libraries */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">SDKs & Libraries</h2>
           
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {sdks.map((sdk, index) => (
-                <Card key={index}>
+                <Card key={index} className="border-0 shadow-lg">
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between">
                       {sdk.name}
@@ -303,14 +303,14 @@ print(f"Recommendations: {analysis['recommendations']}")`}</code>
       </section>
 
       {/* Additional Resources */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Additional Resources</h2>
           
           <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
-            <Card className="text-center">
+            <Card className="border-0 shadow-lg text-center">
               <CardHeader>
-                <Zap className="h-12 w-12 text-primary mx-auto mb-4" />
+                <Zap className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <CardTitle>API Playground</CardTitle>
                 <CardDescription>
                   Test API endpoints interactively with real-time responses
@@ -323,9 +323,9 @@ print(f"Recommendations: {analysis['recommendations']}")`}</code>
               </CardContent>
             </Card>
             
-            <Card className="text-center">
+            <Card className="border-0 shadow-lg text-center">
               <CardHeader>
-                <BookOpen className="h-12 w-12 text-primary mx-auto mb-4" />
+                <BookOpen className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <CardTitle>Tutorials</CardTitle>
                 <CardDescription>
                   Step-by-step guides for common integration patterns
@@ -338,9 +338,9 @@ print(f"Recommendations: {analysis['recommendations']}")`}</code>
               </CardContent>
             </Card>
             
-            <Card className="text-center">
+            <Card className="border-0 shadow-lg text-center">
               <CardHeader>
-                <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
+                <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <CardTitle>Security</CardTitle>
                 <CardDescription>
                   Learn about authentication, rate limits, and best practices

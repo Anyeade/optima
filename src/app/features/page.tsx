@@ -72,7 +72,7 @@ export default function FeaturesPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
       
 
@@ -83,11 +83,11 @@ export default function FeaturesPage() {
             <Zap className="h-4 w-4 mr-2" />
             Powered by OptimaCore AI
           </Badge>
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Powerful Features for
             <br />Business Optimization
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Discover how Optima API&rsquo;s advanced features can transform your business processes,
             reduce costs, and accelerate growth through intelligent automation.
           </p>
@@ -103,31 +103,31 @@ export default function FeaturesPage() {
       </section>
 
       {/* Core Features */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Core Features</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Everything you need to optimize, automate, and scale your business processes
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardHeader>
-                  <div className="text-primary mb-4">
+                  <div className="text-blue-600 mb-4">
                     {feature.icon}
                   </div>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">
+                  <CardDescription className="text-gray-600">
                     {feature.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -142,29 +142,29 @@ export default function FeaturesPage() {
           <HeroParticles />
 
       {/* Use Cases */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Real-World Use Cases</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               See how businesses across industries are using Optima API to drive results
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <Card key={index}>
+              <Card key={index} className="border-0 shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-xl">{useCase.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">
+                  <CardDescription className="text-gray-600">
                     {useCase.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-3 gap-4">
                     {useCase.metrics.map((metric, idx) => (
-                      <div key={idx} className="text-center p-3 bg-accent rounded-lg">
-                        <div className="text-sm font-semibold text-primary">{metric}</div>
+                      <div key={idx} className="text-center p-3 bg-blue-50 rounded-lg">
+                        <div className="text-sm font-semibold text-blue-600">{metric}</div>
                       </div>
                     ))}
                   </div>
@@ -176,7 +176,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* Enterprise Features */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Enterprise-Ready</h2>
@@ -187,26 +187,26 @@ export default function FeaturesPage() {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Security & Compliance</h3>
-              <p className="text-muted-foreground">SOC 2, GDPR, and HIPAA compliant with enterprise-grade security</p>
+              <p className="text-gray-600">SOC 2, GDPR, and HIPAA compliant with enterprise-grade security</p>
             </div>
             <div className="text-center">
-              <Users className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Team Collaboration</h3>
-              <p className="text-muted-foreground">Role-based access, team workspaces, and collaborative optimization</p>
+              <p className="text-gray-600">Role-based access, team workspaces, and collaborative optimization</p>
             </div>
             <div className="text-center">
-              <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Globe className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Global Scale</h3>
-              <p className="text-muted-foreground">Multi-region deployment with 99.99% uptime SLA</p>
+              <p className="text-gray-600">Multi-region deployment with 99.99% uptime SLA</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-primary-foreground">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Optimize Your Business?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
@@ -217,7 +217,7 @@ export default function FeaturesPage() {
               <Button size="lg" variant="secondary">Start Free Trial</Button>
             </Link>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
                 Contact Sales
               </Button>
             </Link>

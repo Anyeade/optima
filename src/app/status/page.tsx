@@ -137,7 +137,7 @@ export default function StatusPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
@@ -154,10 +154,10 @@ export default function StatusPage() {
         <Card className="mb-8">
           <CardContent className="p-8">
             <div className="flex items-center justify-center space-x-4">
-              <CheckCircle className="h-12 w-12 text-primary" />
+              <CheckCircle className="h-12 w-12 text-green-500" />
               <div className="text-center">
-                <h2 className="text-2xl font-bold text-foreground">All Systems Operational</h2>
-                <p className="text-muted-foreground">Last updated: {currentStatus.lastUpdated}</p>
+                <h2 className="text-2xl font-bold text-gray-900">All Systems Operational</h2>
+                <p className="text-gray-600">Last updated: {currentStatus.lastUpdated}</p>
               </div>
             </div>
           </CardContent>
@@ -171,11 +171,11 @@ export default function StatusPage() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-muted-foreground">{metric.name}</p>
-                    <p className="text-2xl font-bold text-foreground">{metric.value}</p>
-                    <p className="text-xs text-muted-foreground">{metric.period}</p>
+                    <p className="text-sm text-gray-600">{metric.name}</p>
+                    <p className="text-2xl font-bold text-gray-900">{metric.value}</p>
+                    <p className="text-xs text-gray-500">{metric.period}</p>
                   </div>
-                  <metric.icon className="h-8 w-8 text-primary" />
+                  <metric.icon className="h-8 w-8 text-blue-600" />
                 </div>
               </CardContent>
             </Card>
@@ -197,10 +197,10 @@ export default function StatusPage() {
                   {services.map((service) => (
                     <div key={service.name} className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-center space-x-3">
-                          {getStatusIcon(service.status)}
-                          <div>
-                            <h3 className="font-medium text-foreground">{service.name}</h3>
-                            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                        {getStatusIcon(service.status)}
+                        <div>
+                          <h3 className="font-medium text-gray-900">{service.name}</h3>
+                          <div className="flex items-center space-x-4 text-sm text-gray-500">
                             <span>Uptime: {service.uptime}</span>
                             <span>Response: {service.responseTime}</span>
                           </div>
@@ -221,8 +221,8 @@ export default function StatusPage() {
                 <CardTitle>Response Time (Last 24 Hours)</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="h-64 bg-muted rounded-lg flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
+                <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div className="text-center text-gray-500">
                     <Activity className="h-12 w-12 mx-auto mb-2" />
                     <p>Performance chart would be displayed here</p>
                     <p className="text-sm">Average response time: 145ms</p>
@@ -249,13 +249,13 @@ export default function StatusPage() {
                       <div className="flex items-start justify-between mb-2">
                         <h4 className="font-medium text-sm">{incident.title}</h4>
                         <span className={`px-2 py-1 rounded text-xs font-medium ${
-                          incident.status === 'resolved' ? 'bg-primary/10 text-primary' : 'bg-secondary/10 text-secondary'
+                          incident.status === 'resolved' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
                         }`}>
                           {incident.status}
                         </span>
                       </div>
-                      <p className="text-xs text-muted-foreground mb-2">{incident.description}</p>
-                      <div className="flex items-center justify-between text-xs text-muted-foreground">
+                      <p className="text-xs text-gray-600 mb-2">{incident.description}</p>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
                         <span>{incident.date}</span>
                         <span>Duration: {incident.duration}</span>
                       </div>
@@ -277,17 +277,17 @@ export default function StatusPage() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 border border-muted rounded focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
+                  className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
-                <button className="w-full bg-primary text-primary-foreground py-2 px-4 rounded hover:bg-primary/90 transition-colors">
+                <button className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
                   Subscribe to Updates
                 </button>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-xs text-gray-500">
                   <p>You can also follow us on:</p>
                   <div className="flex space-x-2 mt-2">
-                    <a href="#" className="text-primary hover:text-primary/80">Twitter</a>
+                    <a href="#" className="text-blue-600 hover:text-blue-700">Twitter</a>
                     <span>•</span>
-                    <a href="#" className="text-primary hover:text-primary/80">Discord</a>
+                    <a href="#" className="text-blue-600 hover:text-blue-700">Discord</a>
                   </div>
                 </div>
               </CardContent>
@@ -303,8 +303,8 @@ export default function StatusPage() {
               </CardHeader>
               <CardContent className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Main API</span>
-                  <span className="text-primary font-medium">Operational</span>
+                  <span className="text-gray-600">Main API</span>
+                  <span className="text-green-600 font-medium">Operational</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Auth API</span>

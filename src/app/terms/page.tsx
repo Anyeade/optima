@@ -63,7 +63,7 @@ export default function TermsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
 
       {/* Hero Section */}
       <section className="py-20">
@@ -79,7 +79,7 @@ export default function TermsPage() {
             Please read these terms carefully before using our services. 
             By using Optima API, you agree to these terms and conditions.
           </p>
-          <div className="flex justify-center space-x-4 text-sm text-muted-foreground">
+          <div className="flex justify-center space-x-4 text-sm text-gray-500">
             <span>Last updated: June 10, 2024</span>
             <span>•</span>
             <span>Effective: June 10, 2024</span>
@@ -89,17 +89,17 @@ export default function TermsPage() {
           <HeroParticles />
 
       {/* Important Notice */}
-      <section className="py-12 bg-muted">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto border-0 shadow-lg bg-primary/10 border-primary/20">
+          <Card className="max-w-4xl mx-auto border-0 shadow-lg bg-amber-50 border-amber-200">
             <CardHeader>
               <div className="flex items-center space-x-3">
-                <AlertTriangle className="h-6 w-6 text-primary" />
-                <CardTitle className="text-xl text-foreground">Important Notice</CardTitle>
+                <AlertTriangle className="h-6 w-6 text-amber-600" />
+                <CardTitle className="text-xl text-amber-800">Important Notice</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground">
+              <p className="text-amber-700">
                 These terms constitute a legally binding agreement. Please read them carefully. 
                 If you do not agree to these terms, you may not use our services. 
                 For questions about these terms, please contact our legal team at legal@optima-api.com.
@@ -110,7 +110,7 @@ export default function TermsPage() {
       </section>
 
       {/* Terms Sections */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             {sections.map((section, index) => (
@@ -124,7 +124,7 @@ export default function TermsPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-foreground leading-relaxed text-lg">{section.content}</p>
+                  <p className="text-gray-700 leading-relaxed text-lg">{section.content}</p>
                 </CardContent>
               </Card>
             ))}
@@ -133,11 +133,11 @@ export default function TermsPage() {
       </section>
 
       {/* Key Points Summary */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Key Points Summary</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Here are the most important aspects of our terms
             </p>
           </div>
@@ -145,31 +145,31 @@ export default function TermsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Card className="border-0 shadow-lg text-center">
               <CardHeader>
-                <FileText className="h-12 w-12 text-primary mx-auto mb-3" />
+                <FileText className="h-12 w-12 text-blue-600 mx-auto mb-3" />
                 <CardTitle>Your Data Rights</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">You retain ownership of your data. We process it only to provide our services.</p>
+                <p className="text-sm text-gray-600">You retain ownership of your data. We process it only to provide our services.</p>
               </CardContent>
             </Card>
             
             <Card className="border-0 shadow-lg text-center">
               <CardHeader>
-                <Shield className="h-12 w-12 text-primary mx-auto mb-3" />
+                <Shield className="h-12 w-12 text-blue-600 mx-auto mb-3" />
                 <CardTitle>Service Limits</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">API usage is subject to rate limits and quotas based on your subscription plan.</p>
+                <p className="text-sm text-gray-600">API usage is subject to rate limits and quotas based on your subscription plan.</p>
               </CardContent>
             </Card>
             
             <Card className="border-0 shadow-lg text-center">
               <CardHeader>
-                <Scale className="h-12 w-12 text-primary mx-auto mb-3" />
+                <Scale className="h-12 w-12 text-blue-600 mx-auto mb-3" />
                 <CardTitle>Fair Use</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">Use our service responsibly and in accordance with applicable laws and regulations.</p>
+                <p className="text-sm text-gray-600">Use our service responsibly and in accordance with applicable laws and regulations.</p>
               </CardContent>
             </Card>
           </div>
@@ -177,7 +177,7 @@ export default function TermsPage() {
       </section>
 
       {/* Contact Legal */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-foreground">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Questions About These Terms?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
@@ -188,7 +188,7 @@ export default function TermsPage() {
               <Button size="lg" variant="secondary">Contact Legal Team</Button>
             </Link>
             <Link href="/privacy">
-              <Button size="lg" variant="outline" className="text-foreground border-foreground hover:bg-foreground hover:text-background">
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
                 View Privacy Policy
               </Button>
             </Link>

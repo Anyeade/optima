@@ -78,7 +78,7 @@ export default function HelpPage() {
   })).filter(category => category.articles.length > 0)
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Hero Section */}
@@ -91,7 +91,7 @@ export default function HelpPage() {
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             How can we help you?
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Find answers, guides, and tutorials to help you get the most out of Optima API
           </p>
           
@@ -101,7 +101,7 @@ export default function HelpPage() {
             <Input
               type="text"
               placeholder="Search for help articles, guides, and tutorials..."
-              className="pl-12 pr-4 py-4 text-lg border-2 border-muted focus:border-primary"
+              className="pl-12 pr-4 py-4 text-lg border-2 border-gray-200 focus:border-blue-500"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -110,7 +110,7 @@ export default function HelpPage() {
       </section>
 
       {/* Quick Actions */}
-      <section className="py-12 bg-muted">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <Card className="border-0 shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
@@ -128,7 +128,7 @@ export default function HelpPage() {
               </CardContent>
             </Card>
             
-            <Card className="border border-muted text-center cursor-pointer">
+            <Card className="border-0 shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
               <CardHeader>
                 <Video className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <CardTitle>Video Tutorials</CardTitle>
@@ -160,7 +160,7 @@ export default function HelpPage() {
       </section>
 
       {/* Popular Articles */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Popular Articles</h2>
           
@@ -198,7 +198,7 @@ export default function HelpPage() {
               <Card key={index} className="border-0 shadow-lg">
                 <CardHeader>
                   <div className="flex items-center space-x-3">
-                    <div className="text-primary">
+                    <div className="text-blue-600">
                       {category.icon}
                     </div>
                     <div>
@@ -237,7 +237,7 @@ export default function HelpPage() {
       </section>
 
       {/* Still Need Help */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-foreground">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Still need help?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
@@ -248,7 +248,7 @@ export default function HelpPage() {
               <Button size="lg" variant="secondary">Contact Support</Button>
             </Link>
             <Link href="/playground">
-              <Button size="lg" variant="outline" className="text-foreground border-foreground hover:bg-foreground hover:text-background">
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
                 Try API Playground
               </Button>
             </Link>
