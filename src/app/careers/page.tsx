@@ -1,5 +1,7 @@
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
@@ -100,6 +102,7 @@ export default function CareersPage() {
             </Link>
           </div>
         </div>
+          <HeroParticles />
 
         {/* Benefits */}
         <div className="mb-16">

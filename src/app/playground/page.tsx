@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { 
@@ -307,6 +309,7 @@ export default function PlaygroundPage() {
                 </CardContent>
               </Card>
             </div>
+          <HeroParticles />
 
             {/* Examples */}
             <Card className="mt-6">

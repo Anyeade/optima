@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/Button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
 import { Input } from "@/components/ui/Input"
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { BookOpen, Search, MessageCircle, FileText, Video, Code, Zap, Shield } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -184,6 +186,7 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
+          <HeroParticles />
 
       {/* Help Categories */}
       <section className="py-20 bg-white">

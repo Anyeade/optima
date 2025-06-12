@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/Button'
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { CheckCircle, Zap, Star, Crown, Building } from 'lucide-react'
 
@@ -172,6 +174,7 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+          <HeroParticles />
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">

@@ -3,6 +3,8 @@
 import { useAuth } from '@/hooks/useAuth'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/Button'
@@ -176,6 +178,7 @@ export default function DashboardPage() {
                 </div>
               </CardContent>
             </Card>
+          <HeroParticles />
 
             {/* Recent Processes */}
             <Card className="mt-6">

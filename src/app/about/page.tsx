@@ -3,6 +3,7 @@ import { Footer } from '@/components/Footer'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { HeroParticles } from '@/components/HeroParticles'
 import {
   Target,
   Users,
@@ -12,6 +13,7 @@ import {
   Shield,
   Zap
 } from 'lucide-react'
+
 
 export default function AboutPage() {
   const team = [
@@ -172,7 +174,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-
+<HeroParticles />
         {/* Company Timeline */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Journey</h2>

@@ -5,6 +5,8 @@ import { Footer } from "@/components/Footer"
 import { Button } from "@/components/ui/Button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { FileText, Scale, Shield, AlertTriangle } from "lucide-react"
 import Link from "next/link"
 
@@ -84,6 +86,7 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
+          <HeroParticles />
 
       {/* Important Notice */}
       <section className="py-12 bg-white">

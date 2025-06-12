@@ -3,6 +3,8 @@
 import { Button } from "@/components/ui/Button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { BookOpen, Code, Zap, Shield, ExternalLink, Copy, CheckCircle } from "lucide-react"
 import Link from "next/link"
@@ -159,7 +161,8 @@ console.log('Recommendations:', analysis.recommendations)`
                 </CardContent>
               </Card>
             </TabsContent>
-            
+                      <HeroParticles />
+
             <TabsContent value="curl" className="space-y-4">
               <Card>
                 <CardHeader>

@@ -2,6 +2,8 @@
 
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
@@ -153,6 +155,7 @@ export default function BlogPage() {
             </div>
           </div>
         </Card>
+          <HeroParticles />
 
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Main Content */}

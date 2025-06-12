@@ -1,5 +1,7 @@
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { 
   CheckCircle, 
@@ -160,6 +162,7 @@ export default function StatusPage() {
             </div>
           </CardContent>
         </Card>
+          <HeroParticles />
 
         {/* Metrics */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

@@ -2,6 +2,8 @@
 
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
@@ -186,6 +188,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
           </div>
+          <HeroParticles />
 
           {/* Contact Methods & Info */}
           <div className="space-y-6">

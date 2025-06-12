@@ -3,6 +3,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { 
   Search, 
   Book, 
@@ -134,6 +136,7 @@ export default function SupportPage() {
             </Card>
           ))}
         </div>
+          <HeroParticles />
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Popular Articles */}

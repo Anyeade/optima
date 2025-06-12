@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
+import { HeroParticles } from '@/components/HeroParticles'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { 
@@ -165,6 +167,7 @@ export default function ApiDocsPage() {
           </div>
         </div>
       </section>
+          <HeroParticles />
 
       {/* Quick Start */}
       <section className="py-20">

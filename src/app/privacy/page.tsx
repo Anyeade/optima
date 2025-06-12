@@ -1,5 +1,7 @@
 import { Navigation } from '@/components/Navigation'
-import { Footer } from '@/components/Footer'
+import { Footer } from '@/components/Footer'  
+ import { HeroParticles } from '@/components/HeroParticles'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 
 export default function PrivacyPage() {
@@ -16,6 +18,7 @@ export default function PrivacyPage() {
             Last updated: December 10, 2024
           </p>
         </div>
+          <HeroParticles />
 
         <Card>
           <CardContent className="p-8 prose prose-gray max-w-none">
