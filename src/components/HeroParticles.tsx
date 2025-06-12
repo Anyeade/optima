@@ -86,7 +86,7 @@ export function HeroParticles() {
   }
 
   return (
-    <div className="fixed inset-0 bg-transparent z-[1]">
+    <div className="fixed inset-0 bg-transparent z-10 pointer-events-none">
       {init && (
         <Particles
           id="hero-particles"

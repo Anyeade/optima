@@ -23,7 +23,7 @@ export function ParticlesBackground() {
   }, [])
 
   return (
-    <div className="fixed inset-0 bg-black z-0">
+    <div className="fixed inset-0 bg-black z-0 pointer-events-none">
       {init && (
         <Particles
           id="tsparticles"
