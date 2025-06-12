@@ -23,7 +23,7 @@ export function ParticlesBackground() {
   }, [])
 
   return (
-    <>
+    <div className="fixed inset-0 bg-black z-[-1]">
       {init && (
         <Particles
           id="tsparticles"
@@ -98,6 +98,6 @@ export function ParticlesBackground() {
       }}
         />
       )}
-    </>
+    </div>
   )
 }
