@@ -30,7 +30,7 @@ export function ParticlesBackground() {
           particlesLoaded={particlesLoaded}
           options={{
             background: {
-              color: 'transparent'
+              color: '#0d1117'
             },
         fpsLimit: 120,
         interactivity: {
