@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import { Navigation } from '@/components/Navigation'
-import { Footer } from '@/components/Footer'
 import { HeroParticles } from '@/components/HeroParticles'
 import { Button } from '@/components/ui/Button'
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -38,17 +36,26 @@ export default function Home() {
               for maximum efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/auth?mode=signup">
-  <Button size="lg" className="text-lg px-8 py-3 text-white bg-blue-600">
-    Start Free Trial
-    <ArrowRight className="ml-2 h-5 w-5" />
-  </Button>
-</Link>
-              <Link href="/docs">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-3">
-                  View Documentation
-                </Button>
+            <Button
+              asChild
+              size="lg"
+              className="text-lg px-8 py-3 text-white bg-blue-600"
+            >
+              <Link href="/auth?mode=signup">
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-3"
+            >
+              <Link href="/docs">
+                View Documentation
+              </Link>
+            </Button>
             </div>
           </div>
         </div>
@@ -196,17 +203,27 @@ export default function Home() {
             Start your free trial today and see results in minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/auth?mode=signup">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-3 text-white">
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="text-lg px-8 py-3 text-white"
+            >
+              <Link href="/auth?mode=signup">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/pricing">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-blue-600 hover:bg-white hover:text-blue-600">
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="text-lg px-8 py-3 border-white text-blue-600 hover:bg-white hover:text-blue-600"
+            >
+              <Link href="/pricing">
                 View Pricing
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
